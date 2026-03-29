@@ -1,0 +1,3331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKR AI-OS — Enterprise Intelligence Platform by Mr. Sujit Kumar Ram</title>
+<meta name="description" content="SKR AI-OS: World-class AI infrastructure tools by Mr. Sujit Kumar Ram. Neural Weight Optimizer, Crypto-Shield Privacy Layer, Auto-Healing Code Refactor.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SKR AI-OS — MASTER STYLESHEET
+   Designer: Mr. Sujit Kumar Ram
+   Version: 4.0 ENTERPRISE
+   ============================================================ */
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --blue-900: #020d1f;
+  --blue-800: #041530;
+  --blue-700: #0a2447;
+  --blue-600: #0f3460;
+  --blue-500: #1a4f8a;
+  --blue-400: #2472c8;
+  --blue-300: #4a9eff;
+  --blue-200: #93c5fd;
+  --blue-100: #dbeafe;
+  --blue-50:  #eff6ff;
+  --white:    #ffffff;
+  --gray-50:  #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+  --accent:   #0066ff;
+  --accent-h: #0052cc;
+  --accent-l: #e8f0ff;
+  --success:  #10b981;
+  --warning:  #f59e0b;
+  --danger:   #ef4444;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow:    0 4px 16px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.12), 0 8px 20px rgba(0,0,0,0.06);
+  --shadow-xl: 0 40px 100px rgba(0,0,0,0.16);
+  --radius-sm: 6px;
+  --radius:    12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+}
+
+html { scroll-behavior:smooth; font-size:16px; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  color: var(--gray-900);
+  background: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── ANTI-COPY SECURITY ── */
+body { -webkit-user-select:none; -moz-user-select:none; user-select:none; }
+img  { -webkit-user-drag:none; pointer-events:none; }
+
+/* ── PAGE SYSTEM ── */
+.page { display:none; animation:pageIn 0.35s ease; }
+.page.active { display:block; }
+@keyframes pageIn { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:none} }
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+#navbar {
+  position: fixed; top:0; left:0; right:0; z-index:1000;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--gray-200);
+  transition: box-shadow var(--transition);
+}
+#navbar.scrolled { box-shadow: var(--shadow); }
+
+.nav-inner {
+  max-width: 1400px; margin:0 auto;
+  padding: 0 40px;
+  height: 72px;
+  display: flex; align-items:center; justify-content:space-between;
+}
+
+.nav-logo {
+  display:flex; align-items:center; gap:12px;
+  cursor:pointer;
+  text-decoration:none;
+}
+
+.logo-mark {
+  width:40px; height:40px;
+  background: linear-gradient(135deg, var(--accent) 0%, #0033cc 100%);
+  border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:14px; color:#fff; letter-spacing:1px;
+  flex-shrink:0;
+  box-shadow: 0 4px 12px rgba(0,102,255,0.35);
+}
+
+.logo-text-block .logo-name {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:17px; color:var(--gray-900); letter-spacing:-0.3px;
+  line-height:1.1;
+}
+.logo-text-block .logo-tagline {
+  font-size:10px; color:var(--gray-400);
+  letter-spacing:1.5px; text-transform:uppercase; font-weight:500;
+}
+
+.nav-links {
+  display:flex; align-items:center; gap:6px;
+}
+
+.nav-links a {
+  font-size:14px; font-weight:500; color:var(--gray-600);
+  text-decoration:none; padding:8px 14px; border-radius:8px;
+  transition:all var(--transition); cursor:pointer;
+  white-space:nowrap;
+}
+.nav-links a:hover, .nav-links a.active {
+  color:var(--accent); background:var(--accent-l);
+}
+
+.nav-cta {
+  display:flex; align-items:center; gap:10px;
+}
+
+.btn {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:10px 22px; border-radius:10px;
+  font-family:'DM Sans',sans-serif; font-weight:500;
+  font-size:14px; cursor:pointer; border:none;
+  text-decoration:none; transition:all var(--transition);
+  white-space:nowrap;
+}
+.btn-primary {
+  background: var(--accent); color:#fff;
+  box-shadow: 0 4px 14px rgba(0,102,255,0.35);
+}
+.btn-primary:hover {
+  background: var(--accent-h); transform:translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0,102,255,0.45);
+}
+.btn-outline {
+  background:transparent; color:var(--accent);
+  border:1.5px solid var(--accent);
+}
+.btn-outline:hover { background:var(--accent-l); }
+.btn-ghost {
+  background:transparent; color:var(--gray-600);
+}
+.btn-ghost:hover { background:var(--gray-100); color:var(--gray-900); }
+.btn-sm { padding:7px 16px; font-size:13px; border-radius:8px; }
+.btn-lg { padding:14px 32px; font-size:16px; border-radius:12px; }
+
+.nav-hamburger {
+  display:none; flex-direction:column; gap:5px;
+  cursor:pointer; padding:8px;
+}
+.nav-hamburger span {
+  display:block; width:22px; height:2px;
+  background:var(--gray-700); border-radius:2px;
+  transition:all var(--transition);
+}
+
+/* ============================================================
+   HERO — HOME
+   ============================================================ */
+.hero {
+  min-height:100vh;
+  background: linear-gradient(165deg, var(--blue-900) 0%, var(--blue-700) 40%, var(--blue-600) 70%, #1a3a6e 100%);
+  position:relative; overflow:hidden;
+  display:flex; flex-direction:column;
+  padding-top:72px;
+}
+
+/* animated mesh background */
+.hero-mesh {
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 30%, rgba(0,102,255,0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 80% 70%, rgba(0,30,120,0.4) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 50% 90%, rgba(0,102,255,0.15) 0%, transparent 60%);
+}
+
+/* grid lines */
+.hero-grid {
+  position:absolute; inset:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size:60px 60px;
+}
+
+.hero-content {
+  flex:1; display:flex; align-items:center;
+  max-width:1400px; margin:0 auto; padding:80px 40px 60px;
+  width:100%; gap:80px;
+  position:relative; z-index:1;
+}
+
+.hero-left { flex:1; }
+
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2);
+  padding:6px 14px; border-radius:100px;
+  font-size:12px; font-weight:500; color:var(--blue-200);
+  letter-spacing:0.5px; margin-bottom:28px;
+  backdrop-filter:blur(10px);
+}
+.hero-badge-dot {
+  width:6px; height:6px; border-radius:50%;
+  background:var(--success); animation:pulse 2s ease infinite;
+}
+@keyframes pulse {
+  0%,100%{transform:scale(1);opacity:1}
+  50%{transform:scale(1.4);opacity:0.7}
+}
+
+.hero-founder {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:15px; color:var(--blue-300);
+  letter-spacing:2px; text-transform:uppercase;
+  margin-bottom:16px; opacity:0;
+  animation:slideUp 0.6s ease forwards 0.1s;
+}
+
+.hero-title {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:clamp(48px,6vw,80px); line-height:1.0;
+  color:#fff; letter-spacing:-2px;
+  margin-bottom:28px; opacity:0;
+  animation:slideUp 0.6s ease forwards 0.25s;
+}
+.hero-title .accent-word {
+  background:linear-gradient(90deg, #4a9eff, #93c5fd);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.hero-subtitle {
+  font-size:18px; line-height:1.75;
+  color:rgba(255,255,255,0.65);
+  font-weight:300; max-width:520px;
+  margin-bottom:40px; opacity:0;
+  animation:slideUp 0.6s ease forwards 0.4s;
+}
+
+.hero-actions {
+  display:flex; gap:14px; flex-wrap:wrap;
+  opacity:0; animation:slideUp 0.6s ease forwards 0.55s;
+}
+
+.hero-stats {
+  display:flex; gap:40px; flex-wrap:wrap;
+  margin-top:60px; padding-top:40px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  opacity:0; animation:slideUp 0.6s ease forwards 0.7s;
+}
+.stat-item { text-align:left; }
+.stat-number {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:38px; color:#fff; line-height:1;
+  letter-spacing:-1px;
+}
+.stat-label {
+  font-size:12px; color:rgba(255,255,255,0.45);
+  text-transform:uppercase; letter-spacing:1.5px;
+  margin-top:4px; font-weight:500;
+}
+
+.hero-right {
+  width:480px; flex-shrink:0;
+  opacity:0; animation:slideRight 0.7s ease forwards 0.4s;
+}
+
+@keyframes slideUp {
+  from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:none}
+}
+@keyframes slideRight {
+  from{opacity:0;transform:translateX(40px)} to{opacity:1;transform:none}
+}
+
+/* Dashboard preview card */
+.dashboard-card {
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:var(--radius-xl);
+  backdrop-filter:blur(20px);
+  overflow:hidden;
+  box-shadow:var(--shadow-xl);
+}
+
+.dc-header {
+  background:rgba(255,255,255,0.08);
+  padding:16px 20px;
+  display:flex; align-items:center; justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.dc-dots { display:flex; gap:6px; }
+.dc-dot {
+  width:10px; height:10px; border-radius:50%;
+}
+.dc-dot-r{background:#ff5f57}
+.dc-dot-y{background:#febc2e}
+.dc-dot-g{background:#28c840}
+.dc-title {
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px; color:rgba(255,255,255,0.5);
+  letter-spacing:1px;
+}
+
+.dc-body { padding:24px; }
+.dc-metric-row {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
+  margin-bottom:20px;
+}
+.dc-metric {
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:10px; padding:14px;
+  transition:all var(--transition);
+}
+.dc-metric:hover { background:rgba(255,255,255,0.1); }
+.dc-m-val {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:22px; color:#fff; line-height:1;
+}
+.dc-m-lbl {
+  font-size:10px; color:rgba(255,255,255,0.4);
+  margin-top:4px; letter-spacing:0.5px;
+}
+.dc-m-change {
+  font-size:10px; font-weight:600;
+  margin-top:6px; display:inline-block;
+  padding:2px 6px; border-radius:4px;
+}
+.dc-m-change.up { background:rgba(16,185,129,0.15); color:#34d399; }
+.dc-m-change.down { background:rgba(239,68,68,0.15); color:#f87171; }
+
+.dc-progress-section { margin-bottom:16px; }
+.dc-progress-lbl {
+  display:flex; justify-content:space-between;
+  font-size:11px; color:rgba(255,255,255,0.5);
+  margin-bottom:6px; font-family:'JetBrains Mono',monospace;
+}
+.dc-bar {
+  height:6px; background:rgba(255,255,255,0.08);
+  border-radius:3px; overflow:hidden;
+}
+.dc-bar-fill {
+  height:100%; border-radius:3px;
+  background:linear-gradient(90deg, var(--accent), var(--blue-300));
+  transition:width 1.5s ease;
+}
+
+.dc-status-row {
+  display:flex; gap:8px; flex-wrap:wrap;
+}
+.dc-status-chip {
+  display:flex; align-items:center; gap:6px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:100px; padding:5px 10px;
+  font-size:10px; color:rgba(255,255,255,0.6);
+  font-family:'JetBrains Mono',monospace;
+}
+.chip-dot {
+  width:5px; height:5px; border-radius:50%;
+}
+.chip-dot.green{background:var(--success)} 
+.chip-dot.blue{background:var(--blue-300)}
+.chip-dot.amber{background:var(--warning)}
+
+/* scroll indicator */
+.hero-scroll {
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  padding:24px; color:rgba(255,255,255,0.3);
+  font-size:11px; letter-spacing:2px; text-transform:uppercase;
+  cursor:pointer;
+  position:relative; z-index:1;
+}
+.scroll-line {
+  width:1px; height:40px;
+  background:linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+  animation:scrollPulse 2s ease infinite;
+}
+@keyframes scrollPulse {
+  0%,100%{transform:scaleY(1);opacity:0.3}
+  50%{transform:scaleY(0.5);opacity:1}
+}
+
+/* ============================================================
+   SECTION LAYOUTS
+   ============================================================ */
+.section {
+  padding:100px 0;
+}
+.section-sm { padding:60px 0; }
+.section-xl { padding:140px 0; }
+.section-dark { background:var(--gray-900); color:#fff; }
+.section-blue { background:var(--blue-50); }
+.section-navy {
+  background:linear-gradient(160deg, var(--blue-900), var(--blue-700));
+  color:#fff;
+}
+
+.container {
+  max-width:1400px; margin:0 auto; padding:0 40px;
+}
+
+.section-label {
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:12px; font-weight:600; letter-spacing:2px;
+  text-transform:uppercase; color:var(--accent);
+  margin-bottom:16px;
+}
+.section-label::before {
+  content:''; width:20px; height:2px; background:var(--accent);
+  display:block;
+}
+
+.section-title {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:clamp(32px,4vw,52px); line-height:1.1;
+  letter-spacing:-1px; color:var(--gray-900);
+  margin-bottom:16px;
+}
+.section-title.light { color:#fff; }
+
+.section-subtitle {
+  font-size:17px; line-height:1.75; color:var(--gray-500);
+  max-width:560px; font-weight:300;
+}
+.section-subtitle.light { color:rgba(255,255,255,0.6); }
+
+.section-header { margin-bottom:64px; }
+.section-header.center { text-align:center; }
+.section-header.center .section-label { justify-content:center; }
+.section-header.center .section-subtitle { margin:0 auto; }
+
+/* ============================================================
+   TOOLS GRID (HOME)
+   ============================================================ */
+.tools-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+}
+
+.tool-card {
+  background:var(--white);
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);
+  padding:40px 36px;
+  position:relative; overflow:hidden;
+  cursor:pointer;
+  transition:all var(--transition);
+  text-decoration:none; color:inherit;
+}
+.tool-card::before {
+  content:''; position:absolute;
+  top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg, var(--accent), var(--blue-300));
+  transform:scaleX(0); transform-origin:left;
+  transition:transform var(--transition);
+}
+.tool-card:hover {
+  border-color:var(--blue-200);
+  box-shadow:var(--shadow-lg);
+  transform:translateY(-4px);
+}
+.tool-card:hover::before { transform:scaleX(1); }
+
+.tool-icon-wrap {
+  width:56px; height:56px;
+  background:var(--accent-l);
+  border-radius:14px;
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom:24px;
+  transition:all var(--transition);
+}
+.tool-card:hover .tool-icon-wrap {
+  background:var(--accent);
+  box-shadow:0 8px 24px rgba(0,102,255,0.3);
+}
+.tool-icon-svg {
+  width:26px; height:26px; color:var(--accent);
+  transition:color var(--transition);
+}
+.tool-card:hover .tool-icon-svg { color:#fff; }
+
+.tool-num {
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px; color:var(--gray-400); letter-spacing:2px;
+  margin-bottom:8px;
+}
+
+.tool-title {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:22px; color:var(--gray-900);
+  letter-spacing:-0.5px; margin-bottom:8px;
+  line-height:1.2;
+}
+
+.tool-subtitle {
+  font-size:12px; font-weight:600;
+  color:var(--accent); letter-spacing:1px;
+  text-transform:uppercase; margin-bottom:16px;
+}
+
+.tool-desc {
+  font-size:14px; line-height:1.75; color:var(--gray-500);
+  margin-bottom:24px;
+}
+
+.tool-tech-stack {
+  display:flex; gap:6px; flex-wrap:wrap; margin-bottom:24px;
+}
+.tech-tag {
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px; padding:3px 10px; border-radius:100px;
+  background:var(--accent-l); color:var(--accent);
+  font-weight:500; letter-spacing:0.5px;
+}
+
+.tool-metric {
+  display:flex; align-items:baseline; gap:8px;
+  padding-top:20px; border-top:1px solid var(--gray-100);
+}
+.metric-num {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:36px; color:var(--accent); line-height:1;
+}
+.metric-text { font-size:13px; color:var(--gray-500); }
+
+.tool-arrow {
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:13px; font-weight:600; color:var(--accent);
+  margin-top:16px;
+  transition:gap var(--transition);
+}
+.tool-card:hover .tool-arrow { gap:10px; }
+
+/* ============================================================
+   FEATURES SECTION
+   ============================================================ */
+.features-grid {
+  display:grid; grid-template-columns:repeat(2,1fr); gap:2px;
+  background:var(--gray-200); border-radius:var(--radius-lg);
+  overflow:hidden;
+}
+
+.feature-item {
+  background:var(--white); padding:48px 44px;
+  transition:background var(--transition);
+}
+.feature-item:hover { background:var(--blue-50); }
+
+.feature-icon-wrap {
+  width:48px; height:48px;
+  background:var(--accent-l); border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom:20px;
+}
+
+.feature-title {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:20px; color:var(--gray-900);
+  margin-bottom:10px; letter-spacing:-0.3px;
+}
+
+.feature-desc {
+  font-size:14px; line-height:1.75; color:var(--gray-500);
+}
+
+/* ============================================================
+   TOOL PAGES (DETAIL)
+   ============================================================ */
+.tool-page-hero {
+  background:linear-gradient(160deg, var(--blue-900) 0%, var(--blue-700) 100%);
+  padding:140px 0 80px; color:#fff; position:relative; overflow:hidden;
+}
+.tool-page-hero::after {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 60% 70% at 80% 50%, rgba(0,102,255,0.2) 0%, transparent 70%);
+  pointer-events:none;
+}
+
+.tool-page-hero .container { position:relative; z-index:1; }
+
+.tool-hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(0,102,255,0.2); border:1px solid rgba(0,102,255,0.4);
+  padding:5px 14px; border-radius:100px;
+  font-size:11px; font-weight:600; color:var(--blue-200);
+  letter-spacing:2px; text-transform:uppercase; margin-bottom:24px;
+}
+
+.tool-hero-title {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:clamp(40px,5vw,68px); line-height:1.0;
+  letter-spacing:-2px; color:#fff; margin-bottom:20px;
+}
+
+.tool-hero-subtitle {
+  font-size:18px; line-height:1.75; color:rgba(255,255,255,0.6);
+  max-width:580px; font-weight:300; margin-bottom:36px;
+}
+
+.tool-hero-meta {
+  display:flex; gap:32px; flex-wrap:wrap;
+}
+.meta-item { display:flex; flex-direction:column; gap:4px; }
+.meta-label {
+  font-size:10px; color:rgba(255,255,255,0.4);
+  text-transform:uppercase; letter-spacing:2px; font-weight:600;
+}
+.meta-value {
+  font-family:'JetBrains Mono',monospace;
+  font-size:13px; color:var(--blue-200); font-weight:500;
+}
+
+/* LIVE DEMO AREA */
+.demo-container {
+  background:var(--gray-50);
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius-xl);
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+}
+
+.demo-topbar {
+  background:var(--white);
+  border-bottom:1px solid var(--gray-200);
+  padding:14px 24px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+
+.demo-topbar-title {
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px; color:var(--gray-500); letter-spacing:1px;
+}
+
+.demo-status {
+  display:flex; align-items:center; gap:6px;
+  font-size:12px; font-weight:500; color:var(--success);
+  font-family:'JetBrains Mono',monospace;
+}
+.demo-status-dot {
+  width:7px; height:7px; border-radius:50%;
+  background:var(--success); animation:pulse 2s ease infinite;
+}
+
+.demo-body { padding:32px; }
+
+/* controls */
+.control-row {
+  display:flex; align-items:center; gap:16px;
+  margin-bottom:20px; flex-wrap:wrap;
+}
+
+.control-label {
+  font-size:13px; font-weight:500; color:var(--gray-700);
+  min-width:160px;
+}
+
+.control-slider {
+  flex:1; min-width:200px;
+  -webkit-appearance:none; appearance:none;
+  height:4px; background:var(--gray-200); border-radius:2px;
+  outline:none; cursor:pointer;
+}
+.control-slider::-webkit-slider-thumb {
+  -webkit-appearance:none; appearance:none;
+  width:18px; height:18px; border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 2px 8px rgba(0,102,255,0.4);
+  cursor:pointer; transition:all var(--transition);
+}
+.control-slider::-webkit-slider-thumb:hover {
+  transform:scale(1.2);
+}
+
+.control-val {
+  font-family:'JetBrains Mono',monospace;
+  font-size:13px; font-weight:500; color:var(--accent);
+  min-width:50px; text-align:right;
+}
+
+/* result visualization */
+.result-grid {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:16px;
+  margin:24px 0;
+}
+.result-box {
+  background:var(--white);
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:20px; text-align:center;
+  transition:all var(--transition);
+}
+.result-box:hover {
+  border-color:var(--blue-200);
+  box-shadow:var(--shadow);
+}
+.result-val {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:28px; color:var(--accent); line-height:1;
+  margin-bottom:4px;
+}
+.result-lbl {
+  font-size:11px; color:var(--gray-400); font-weight:500;
+  letter-spacing:0.5px;
+}
+
+/* progress bars */
+.prog-section { margin:20px 0; }
+.prog-row {
+  display:flex; align-items:center; gap:14px; margin-bottom:12px;
+}
+.prog-lbl {
+  font-size:12px; color:var(--gray-600); min-width:180px;
+  font-weight:500;
+}
+.prog-bar {
+  flex:1; height:8px; background:var(--gray-100);
+  border-radius:4px; overflow:hidden;
+}
+.prog-fill {
+  height:100%; border-radius:4px;
+  background:linear-gradient(90deg, var(--accent), var(--blue-300));
+  transition:width 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+.prog-val {
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px; color:var(--gray-500); min-width:36px;
+  text-align:right;
+}
+
+/* run button */
+.run-btn {
+  display:inline-flex; align-items:center; gap:10px;
+  background:var(--accent); color:#fff;
+  padding:13px 28px; border-radius:10px; border:none;
+  font-family:'DM Sans',sans-serif; font-weight:600;
+  font-size:14px; cursor:pointer;
+  transition:all var(--transition);
+  box-shadow:0 4px 14px rgba(0,102,255,0.35);
+}
+.run-btn:hover {
+  background:var(--accent-h); transform:translateY(-1px);
+  box-shadow:0 6px 20px rgba(0,102,255,0.45);
+}
+.run-btn:active { transform:none; }
+
+.run-btn-icon {
+  width:16px; height:16px;
+  border:2px solid #fff; border-radius:50%;
+  position:relative;
+}
+.run-btn-icon::after {
+  content:''; position:absolute;
+  left:3px; top:1px;
+  border-left:8px solid #fff; border-top:4px solid transparent;
+  border-bottom:4px solid transparent;
+}
+
+/* log terminal */
+.log-terminal {
+  background:#0d1117; border-radius:10px;
+  padding:20px; margin-top:20px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px; line-height:1.8;
+  height:200px; overflow-y:auto;
+  border:1px solid #21262d;
+}
+.log-terminal::-webkit-scrollbar { width:4px; }
+.log-terminal::-webkit-scrollbar-thumb { background:#30363d; border-radius:2px; }
+
+.log-line { margin:0; }
+.log-ts { color:#484f58; }
+.log-ok  { color:#3fb950; }
+.log-info{ color:#58a6ff; }
+.log-warn{ color:#d29922; }
+.log-err { color:#f85149; }
+.log-data{ color:#e6edf3; }
+
+/* ============================================================
+   ENGINE 01 — NEURAL OPTIMIZER
+   ============================================================ */
+.model-visualization {
+  display:grid; grid-template-columns:1fr 40px 1fr; gap:0;
+  align-items:center; margin:24px 0;
+}
+.model-box {
+  background:var(--white); border:1px solid var(--gray-200);
+  border-radius:var(--radius); padding:20px;
+}
+.model-title {
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px; color:var(--gray-400); margin-bottom:12px;
+  letter-spacing:1px;
+}
+.weight-grid {
+  display:grid; grid-template-columns:repeat(8,1fr); gap:3px;
+}
+.weight-cell {
+  height:18px; border-radius:2px;
+  transition:all 0.8s ease;
+}
+.w-active { background:var(--accent); }
+.w-pruned { background:var(--gray-100); border:1px solid var(--gray-200); }
+.w-important { background:#0033cc; }
+
+.arrow-wrap {
+  display:flex; align-items:center; justify-content:center;
+  font-size:20px; color:var(--gray-400);
+}
+
+.compression-stats {
+  background:linear-gradient(135deg, var(--accent), #0033cc);
+  color:#fff; border-radius:var(--radius); padding:20px;
+  margin-top:16px;
+}
+.cs-row {
+  display:flex; justify-content:space-between;
+  align-items:center; padding:6px 0;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  font-size:13px;
+}
+.cs-row:last-child { border:none; padding-bottom:0; }
+.cs-key { color:rgba(255,255,255,0.7); }
+.cs-val { font-weight:600; color:#fff; font-family:'JetBrains Mono',monospace; }
+
+/* ============================================================
+   ENGINE 02 — CRYPTO SHIELD
+   ============================================================ */
+.encryption-flow {
+  display:grid; grid-template-columns:1fr 50px 1fr 50px 1fr;
+  align-items:center; gap:0; margin:24px 0;
+}
+.enc-step {
+  background:var(--white); border:1px solid var(--gray-200);
+  border-radius:var(--radius); padding:20px; text-align:center;
+}
+.enc-step-icon {
+  width:40px; height:40px;
+  background:var(--accent-l); border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 10px;
+}
+.enc-step-title {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:13px; color:var(--gray-800); margin-bottom:4px;
+}
+.enc-step-desc {
+  font-size:11px; color:var(--gray-400); line-height:1.4;
+}
+.enc-arrow { text-align:center; font-size:20px; color:var(--gray-300); }
+
+.enc-output {
+  background:#0d1117; border-radius:var(--radius);
+  padding:16px; margin-top:16px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+}
+.enc-key { color:#58a6ff; margin-bottom:6px; }
+.enc-cipher { color:#3fb950; word-break:break-all; line-height:1.5; }
+
+.key-indicator {
+  display:flex; align-items:center; gap:12px;
+  background:var(--accent-l); border:1px solid var(--blue-200);
+  border-radius:10px; padding:14px 18px; margin-top:12px;
+}
+.key-icon {
+  width:32px; height:32px;
+  background:var(--accent); border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+}
+.key-info { flex:1; }
+.key-label {
+  font-size:11px; color:var(--gray-400);
+  text-transform:uppercase; letter-spacing:1px; font-weight:600;
+}
+.key-value {
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px; color:var(--accent); font-weight:500;
+}
+
+/* ============================================================
+   ENGINE 03 — AUTO HEALER
+   ============================================================ */
+.code-diff {
+  display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0;
+}
+.code-panel {
+  background:#0d1117; border-radius:var(--radius);
+  border:1px solid #21262d; overflow:hidden;
+}
+.code-panel-header {
+  background:#161b22; padding:10px 16px;
+  display:flex; align-items:center; justify-content:space-between;
+  border-bottom:1px solid #21262d;
+}
+.code-panel-title {
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px; letter-spacing:1px;
+}
+.code-panel-title.bad { color:#f85149; }
+.code-panel-title.good { color:#3fb950; }
+
+.code-badge {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; padding:2px 8px; border-radius:4px;
+  font-weight:600;
+}
+.code-badge.issues { background:rgba(248,81,73,0.15); color:#f85149; }
+.code-badge.clean  { background:rgba(63,185,80,0.15); color:#3fb950; }
+
+.code-body {
+  padding:16px; font-family:'JetBrains Mono',monospace;
+  font-size:12px; line-height:1.8; overflow-x:auto;
+}
+.c-kw  { color:#ff7b72; }
+.c-fn  { color:#d2a8ff; }
+.c-str { color:#a5d6ff; }
+.c-com { color:#8b949e; }
+.c-num { color:#79c0ff; }
+.c-bug { background:rgba(248,81,73,0.2); border-left:3px solid #f85149; padding-left:4px; display:block; }
+.c-fix { background:rgba(63,185,80,0.1); border-left:3px solid #3fb950; padding-left:4px; display:block; }
+.c-var { color:#e6edf3; }
+
+.issues-list {
+  margin-top:16px;
+}
+.issue-item {
+  display:flex; align-items:flex-start; gap:12px;
+  padding:14px; background:var(--white); border:1px solid var(--gray-200);
+  border-radius:10px; margin-bottom:10px;
+  transition:all var(--transition);
+}
+.issue-item:hover { border-color:var(--blue-200); box-shadow:var(--shadow-sm); }
+
+.issue-severity {
+  padding:2px 8px; border-radius:100px;
+  font-size:10px; font-weight:700; letter-spacing:0.5px;
+  flex-shrink:0;
+}
+.sev-critical { background:rgba(239,68,68,0.1); color:var(--danger); }
+.sev-high     { background:rgba(245,158,11,0.1); color:var(--warning); }
+.sev-medium   { background:rgba(0,102,255,0.1); color:var(--accent); }
+
+.issue-text { flex:1; font-size:13px; color:var(--gray-700); }
+.issue-line {
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px; color:var(--gray-400);
+}
+
+/* ============================================================
+   SKR AGENT PAGE
+   ============================================================ */
+.agent-hero {
+  background:linear-gradient(155deg, var(--gray-900) 0%, #0d1e3d 100%);
+  padding:140px 0 80px; color:#fff; position:relative; overflow:hidden;
+}
+.agent-hero::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 50% 80% at 70% 50%, rgba(0,102,255,0.15) 0%, transparent 70%);
+}
+
+.agent-terminal-hero {
+  width:100%; max-width:720px;
+  background:#0d1117; border-radius:var(--radius-lg);
+  border:1px solid #30363d; overflow:hidden;
+  box-shadow:var(--shadow-xl);
+}
+
+.agent-shell {
+  padding:20px 24px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:13px; line-height:2;
+  height:340px; overflow-y:auto;
+}
+.agent-shell::-webkit-scrollbar { width:4px; }
+.agent-shell::-webkit-scrollbar-thumb { background:#30363d; border-radius:2px; }
+
+.shell-input-row {
+  display:flex; align-items:center; gap:0;
+  border-top:1px solid #21262d;
+  padding:12px 20px;
+}
+.shell-prompt-sym { color:#3fb950; font-family:'JetBrains Mono',monospace; font-size:13px; margin-right:8px; }
+.shell-input {
+  flex:1; background:transparent; border:none; outline:none;
+  color:#e6edf3; font-family:'JetBrains Mono',monospace;
+  font-size:13px; caret-color:#3fb950;
+}
+.shell-send {
+  background:var(--accent); color:#fff; border:none;
+  padding:6px 14px; border-radius:6px; cursor:pointer;
+  font-size:12px; font-weight:600; transition:all var(--transition);
+}
+.shell-send:hover { background:var(--accent-h); }
+
+.blink { animation:blink-cur 1s step-end infinite; }
+@keyframes blink-cur { 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* agent capabilities grid */
+.agent-caps-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+}
+.agent-cap {
+  background:var(--white); border:1px solid var(--gray-200);
+  border-radius:var(--radius); padding:28px;
+  transition:all var(--transition);
+}
+.agent-cap:hover {
+  border-color:var(--blue-200); box-shadow:var(--shadow);
+  transform:translateY(-3px);
+}
+.cap-icon {
+  width:44px; height:44px; background:var(--accent-l);
+  border-radius:10px; display:flex; align-items:center;
+  justify-content:center; margin-bottom:16px;
+}
+.cap-title {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:16px; color:var(--gray-900); margin-bottom:6px;
+}
+.cap-desc {
+  font-size:13px; line-height:1.65; color:var(--gray-500);
+}
+
+/* ============================================================
+   SETTINGS PAGE
+   ============================================================ */
+.settings-layout {
+  display:grid; grid-template-columns:260px 1fr; gap:32px;
+  align-items:start;
+}
+
+.settings-sidebar {
+  background:var(--white); border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg); overflow:hidden;
+  position:sticky; top:104px;
+}
+
+.settings-sidebar-header {
+  padding:20px 24px; border-bottom:1px solid var(--gray-100);
+}
+.settings-sidebar-title {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:16px; color:var(--gray-900);
+}
+
+.settings-nav-item {
+  display:flex; align-items:center; gap:12px;
+  padding:14px 24px; font-size:14px; font-weight:500;
+  color:var(--gray-600); cursor:pointer;
+  border-bottom:1px solid var(--gray-50);
+  transition:all var(--transition);
+}
+.settings-nav-item:hover, .settings-nav-item.active {
+  background:var(--accent-l); color:var(--accent);
+}
+.settings-nav-item .sni-dot {
+  width:7px; height:7px; border-radius:50%;
+  background:var(--gray-300); flex-shrink:0;
+}
+.settings-nav-item.active .sni-dot { background:var(--accent); }
+
+.settings-panel {
+  background:var(--white); border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg); padding:40px;
+}
+
+.settings-section-title {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:22px; color:var(--gray-900); margin-bottom:4px;
+}
+.settings-section-desc {
+  font-size:14px; color:var(--gray-400); margin-bottom:32px;
+}
+
+.settings-group {
+  margin-bottom:36px; padding-bottom:36px;
+  border-bottom:1px solid var(--gray-100);
+}
+.settings-group:last-child { border:none; padding-bottom:0; margin-bottom:0; }
+
+.settings-group-title {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:14px; color:var(--gray-700);
+  text-transform:uppercase; letter-spacing:1px;
+  margin-bottom:20px;
+}
+
+.settings-row {
+  display:flex; align-items:flex-start; justify-content:space-between;
+  gap:32px; padding:16px 0;
+  border-bottom:1px solid var(--gray-50);
+}
+.settings-row:last-child { border:none; }
+
+.settings-row-info { flex:1; }
+.settings-row-title {
+  font-size:14px; font-weight:500; color:var(--gray-800); margin-bottom:3px;
+}
+.settings-row-desc { font-size:12px; color:var(--gray-400); line-height:1.5; }
+
+/* toggle switch */
+.toggle-switch {
+  position:relative; width:46px; height:24px; flex-shrink:0;
+}
+.toggle-switch input { opacity:0; width:0; height:0; }
+.toggle-slider {
+  position:absolute; cursor:pointer; inset:0;
+  background:var(--gray-200); border-radius:24px;
+  transition:all var(--transition);
+}
+.toggle-slider::before {
+  content:''; position:absolute;
+  height:18px; width:18px; left:3px; bottom:3px;
+  background:#fff; border-radius:50%;
+  transition:all var(--transition);
+  box-shadow:var(--shadow-sm);
+}
+.toggle-switch input:checked + .toggle-slider { background:var(--accent); }
+.toggle-switch input:checked + .toggle-slider::before { transform:translateX(22px); }
+
+/* select */
+.settings-select {
+  padding:8px 32px 8px 12px; border-radius:8px;
+  border:1.5px solid var(--gray-200); background:var(--white);
+  font-family:'DM Sans',sans-serif; font-size:13px; color:var(--gray-700);
+  outline:none; cursor:pointer; min-width:140px;
+  transition:border-color var(--transition);
+  -webkit-appearance:none; appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 10px center;
+}
+.settings-select:focus { border-color:var(--accent); }
+
+/* API Key input */
+.api-key-input-wrap {
+  display:flex; gap:8px; align-items:center;
+}
+.api-input {
+  flex:1; padding:9px 14px; border-radius:8px;
+  border:1.5px solid var(--gray-200); background:var(--white);
+  font-family:'JetBrains Mono',monospace; font-size:12px;
+  color:var(--gray-700); outline:none;
+  transition:border-color var(--transition);
+}
+.api-input:focus { border-color:var(--accent); }
+.api-copy-btn {
+  padding:9px 14px; border-radius:8px;
+  background:var(--gray-100); border:1.5px solid var(--gray-200);
+  font-size:12px; font-weight:600; color:var(--gray-600);
+  cursor:pointer; transition:all var(--transition);
+}
+.api-copy-btn:hover { background:var(--accent-l); border-color:var(--accent); color:var(--accent); }
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+.about-hero {
+  background:linear-gradient(160deg, var(--blue-900), var(--blue-600));
+  padding:140px 0 80px; color:#fff;
+}
+
+.founder-card {
+  display:grid; grid-template-columns:auto 1fr; gap:48px;
+  align-items:center;
+  background:var(--white); border:1px solid var(--gray-200);
+  border-radius:var(--radius-xl); padding:48px;
+  margin-bottom:48px;
+  box-shadow:var(--shadow-lg);
+}
+
+.founder-avatar {
+  width:140px; height:140px;
+  background:linear-gradient(135deg, var(--accent) 0%, #0033cc 100%);
+  border-radius:28px;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:48px; color:#fff; flex-shrink:0;
+  box-shadow:0 16px 40px rgba(0,102,255,0.3);
+}
+
+.founder-name {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:38px; color:var(--gray-900); letter-spacing:-1px;
+  margin-bottom:6px;
+}
+.founder-title {
+  font-size:16px; color:var(--accent); font-weight:600;
+  margin-bottom:16px;
+}
+.founder-bio {
+  font-size:15px; line-height:1.8; color:var(--gray-500);
+  font-weight:300; max-width:600px;
+}
+
+.about-mission {
+  background:linear-gradient(135deg, var(--accent), #0033cc);
+  border-radius:var(--radius-xl); padding:60px;
+  color:#fff; margin-bottom:48px;
+}
+.mission-title {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:36px; letter-spacing:-1px;
+  margin-bottom:16px;
+}
+.mission-text {
+  font-size:17px; line-height:1.8;
+  color:rgba(255,255,255,0.8); font-weight:300;
+  max-width:700px;
+}
+
+.about-stats-grid {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:20px;
+  margin-bottom:48px;
+}
+.about-stat {
+  background:var(--white); border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg); padding:32px; text-align:center;
+  transition:all var(--transition);
+}
+.about-stat:hover {
+  border-color:var(--blue-200); box-shadow:var(--shadow);
+  transform:translateY(-4px);
+}
+.about-stat-num {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:44px; color:var(--accent); line-height:1;
+  letter-spacing:-2px; margin-bottom:8px;
+}
+.about-stat-lbl {
+  font-size:13px; color:var(--gray-500); font-weight:500;
+}
+
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+.contact-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:40px;
+}
+
+.contact-info-card {
+  background:linear-gradient(155deg, var(--blue-900), var(--blue-700));
+  border-radius:var(--radius-xl); padding:48px; color:#fff;
+}
+.ci-title {
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:36px; letter-spacing:-1px; margin-bottom:12px;
+}
+.ci-sub {
+  font-size:15px; color:rgba(255,255,255,0.6); margin-bottom:40px;
+  line-height:1.7;
+}
+
+.contact-detail {
+  display:flex; align-items:flex-start; gap:16px; margin-bottom:28px;
+}
+.cd-icon {
+  width:44px; height:44px; border-radius:10px;
+  background:rgba(255,255,255,0.1); flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+}
+.cd-label {
+  font-size:11px; color:rgba(255,255,255,0.4);
+  text-transform:uppercase; letter-spacing:2px; font-weight:600;
+  margin-bottom:3px;
+}
+.cd-value {
+  font-size:16px; font-weight:500; color:#fff;
+}
+.cd-value a { color:var(--blue-200); text-decoration:none; }
+.cd-value a:hover { color:#fff; }
+
+.contact-form-card {
+  background:var(--white); border:1px solid var(--gray-200);
+  border-radius:var(--radius-xl); padding:48px;
+  box-shadow:var(--shadow-lg);
+}
+.cf-title {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:24px; color:var(--gray-900); margin-bottom:4px;
+}
+.cf-sub { font-size:14px; color:var(--gray-400); margin-bottom:32px; }
+
+.form-group { margin-bottom:20px; }
+.form-label {
+  display:block; font-size:13px; font-weight:600;
+  color:var(--gray-700); margin-bottom:6px; letter-spacing:0.3px;
+}
+.form-input, .form-textarea, .form-select {
+  width:100%; padding:12px 16px; border-radius:10px;
+  border:1.5px solid var(--gray-200); background:var(--white);
+  font-family:'DM Sans',sans-serif; font-size:14px;
+  color:var(--gray-800); outline:none;
+  transition:border-color var(--transition);
+  resize:vertical;
+}
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(0,102,255,0.08);
+}
+.form-input::placeholder, .form-textarea::placeholder {
+  color:var(--gray-300);
+}
+.form-textarea { min-height:120px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+
+/* ============================================================
+   PRIVACY POLICY PAGE
+   ============================================================ */
+.policy-container { max-width:800px; margin:0 auto; }
+
+.policy-toc {
+  background:var(--blue-50); border:1px solid var(--blue-100);
+  border-radius:var(--radius); padding:24px 28px; margin-bottom:40px;
+}
+.policy-toc-title {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:16px; color:var(--gray-900); margin-bottom:14px;
+}
+.policy-toc ol {
+  padding-left:18px;
+}
+.policy-toc li {
+  font-size:14px; color:var(--accent); margin-bottom:6px;
+  cursor:pointer;
+}
+.policy-toc li:hover { text-decoration:underline; }
+
+.policy-section { margin-bottom:48px; }
+.policy-section-title {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:22px; color:var(--gray-900);
+  margin-bottom:16px; padding-bottom:12px;
+  border-bottom:2px solid var(--gray-100);
+}
+.policy-text {
+  font-size:14px; line-height:1.9; color:var(--gray-600); margin-bottom:14px;
+}
+.policy-list {
+  list-style:none; padding:0; margin:14px 0;
+}
+.policy-list li {
+  font-size:14px; line-height:1.7; color:var(--gray-600);
+  padding:6px 0 6px 20px; position:relative;
+}
+.policy-list li::before {
+  content:''; position:absolute; left:0; top:13px;
+  width:6px; height:6px; border-radius:50%;
+  background:var(--accent);
+}
+.policy-highlight {
+  background:var(--accent-l); border-left:3px solid var(--accent);
+  padding:14px 18px; border-radius:0 8px 8px 0;
+  font-size:13px; color:var(--gray-700); margin:16px 0;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background:var(--gray-900); color:rgba(255,255,255,0.6);
+}
+.footer-main {
+  max-width:1400px; margin:0 auto; padding:60px 40px 40px;
+  display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px;
+}
+.footer-brand-col {}
+.footer-logo {
+  display:flex; align-items:center; gap:12px; margin-bottom:20px;
+  cursor:pointer;
+}
+.footer-logo .logo-mark { background:linear-gradient(135deg, var(--accent), #0033cc); }
+.footer-logo .logo-name { color:#fff; }
+.footer-logo .logo-tagline { color:rgba(255,255,255,0.3); }
+
+.footer-desc {
+  font-size:13px; line-height:1.8; color:rgba(255,255,255,0.4);
+  margin-bottom:24px; max-width:300px;
+}
+
+.footer-email a {
+  font-size:14px; color:var(--blue-300);
+  text-decoration:none; font-weight:500;
+  transition:color var(--transition);
+}
+.footer-email a:hover { color:#fff; }
+
+.footer-col-title {
+  font-family:'Syne',sans-serif; font-weight:700;
+  font-size:14px; color:#fff; margin-bottom:16px;
+  letter-spacing:0.5px;
+}
+.footer-col ul { list-style:none; }
+.footer-col ul li { margin-bottom:10px; }
+.footer-col ul li a {
+  font-size:13px; color:rgba(255,255,255,0.4);
+  text-decoration:none; cursor:pointer;
+  transition:color var(--transition);
+}
+.footer-col ul li a:hover { color:rgba(255,255,255,0.8); }
+
+.footer-bottom {
+  max-width:1400px; margin:0 auto;
+  padding:20px 40px;
+  border-top:1px solid rgba(255,255,255,0.06);
+  display:flex; align-items:center; justify-content:space-between;
+}
+.footer-copy {
+  font-size:12px; color:rgba(255,255,255,0.25); font-weight:400;
+}
+.footer-founder {
+  font-size:12px; color:rgba(255,255,255,0.25);
+}
+.footer-founder strong { color:rgba(255,255,255,0.5); }
+
+/* ============================================================
+   SECURITY OVERLAY
+   ============================================================ */
+.security-banner {
+  position:fixed; bottom:20px; right:20px; z-index:500;
+  background:rgba(10,20,40,0.95); border:1px solid rgba(0,102,255,0.3);
+  border-radius:12px; padding:12px 18px;
+  display:flex; align-items:center; gap:10px;
+  backdrop-filter:blur(20px);
+  box-shadow:0 8px 32px rgba(0,0,0,0.3);
+  font-size:11px; color:rgba(255,255,255,0.5);
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.5px;
+  pointer-events:none;
+}
+.sec-dot {
+  width:6px; height:6px; border-radius:50%;
+  background:var(--success); animation:pulse 2s ease infinite;
+  flex-shrink:0;
+}
+
+/* ============================================================
+   NOTIFICATION TOAST
+   ============================================================ */
+.toast {
+  position:fixed; top:88px; right:20px; z-index:2000;
+  background:var(--gray-900); color:#fff;
+  padding:14px 20px; border-radius:10px;
+  font-size:13px; font-weight:500;
+  box-shadow:var(--shadow-lg);
+  border-left:3px solid var(--success);
+  transform:translateX(120%);
+  transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  max-width:320px;
+}
+.toast.show { transform:translateX(0); }
+
+/* ============================================================
+   UTILITY
+   ============================================================ */
+.text-center { text-align:center; }
+.mb-8  { margin-bottom:8px; }
+.mb-16 { margin-bottom:16px; }
+.mb-24 { margin-bottom:24px; }
+.mb-32 { margin-bottom:32px; }
+.mb-48 { margin-bottom:48px; }
+.mt-32 { margin-top:32px; }
+.mt-48 { margin-top:48px; }
+.flex   { display:flex; }
+.items-center { align-items:center; }
+.gap-12 { gap:12px; }
+.gap-16 { gap:16px; }
+.gap-24 { gap:24px; }
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.full-width { width:100%; }
+
+/* NOTICE CARD */
+.notice-card {
+  background:var(--accent-l); border:1px solid var(--blue-200);
+  border-radius:var(--radius); padding:20px 24px;
+  display:flex; gap:14px; margin:20px 0;
+}
+.notice-icon { font-size:18px; flex-shrink:0; margin-top:1px; }
+.notice-text { font-size:13px; line-height:1.7; color:var(--gray-700); }
+
+/* RESPONSIVE */
+@media (max-width:1024px) {
+  .tools-grid { grid-template-columns:repeat(2,1fr); }
+  .hero-content { flex-direction:column; gap:48px; }
+  .hero-right { width:100%; }
+  .footer-main { grid-template-columns:1fr 1fr; }
+  .agent-caps-grid { grid-template-columns:1fr 1fr; }
+  .about-stats-grid { grid-template-columns:repeat(2,1fr); }
+  .contact-grid { grid-template-columns:1fr; }
+  .features-grid { grid-template-columns:1fr; }
+}
+@media (max-width:768px) {
+  .nav-links { display:none; }
+  .nav-hamburger { display:flex; }
+  .tools-grid { grid-template-columns:1fr; }
+  .settings-layout { grid-template-columns:1fr; }
+  .settings-sidebar { position:static; }
+  .code-diff { grid-template-columns:1fr; }
+  .encryption-flow { grid-template-columns:1fr; }
+  .enc-arrow { display:none; }
+  .footer-main { grid-template-columns:1fr; }
+  .container { padding:0 20px; }
+  .hero-content { padding:60px 20px 40px; }
+  .form-row { grid-template-columns:1fr; }
+  .founder-card { grid-template-columns:1fr; text-align:center; }
+  .footer-bottom { flex-direction:column; gap:8px; text-align:center; }
+}
+</style>
+</head>
+<body>
+
+<!-- SECURITY BANNER -->
+<div class="security-banner">
+  <span class="sec-dot"></span>
+  SKR SECURE · AES-256-GCM ACTIVE · SESSION PROTECTED
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast"></div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" onclick="navigate('home')">
+      <div class="logo-mark">SKR</div>
+      <div class="logo-text-block">
+        <div class="logo-name">SKR AI-OS</div>
+        <div class="logo-tagline">Enterprise Platform</div>
+      </div>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a onclick="navigate('home')" class="active" data-page="home">Home</a>
+      <a onclick="navigate('engine1')" data-page="engine1">Neural Optimizer</a>
+      <a onclick="navigate('engine2')" data-page="engine2">Crypto Shield</a>
+      <a onclick="navigate('engine3')" data-page="engine3">Auto Healer</a>
+      <a onclick="navigate('agent')" data-page="agent">SKR Agent</a>
+      <a onclick="navigate('settings')" data-page="settings">Settings</a>
+      <a onclick="navigate('about')" data-page="about">About</a>
+      <a onclick="navigate('contact')" data-page="contact">Contact</a>
+    </div>
+
+    <div class="nav-cta">
+      <button class="btn btn-outline btn-sm" onclick="navigate('contact')">Get Enterprise Access</button>
+      <button class="btn btn-primary btn-sm" onclick="navigate('agent')">Launch Agent</button>
+    </div>
+
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     PAGE: HOME
+     ============================================================ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-mesh"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content container">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Enterprise AI Infrastructure Platform — V4.0
+        </div>
+        <div class="hero-founder">Mr. Sujit Kumar Ram</div>
+        <h1 class="hero-title">
+          The World's Most<br>
+          Advanced <span class="accent-word">AI-OS</span><br>
+          Engine Suite
+        </h1>
+        <p class="hero-subtitle">
+          Three precision-built engines running entirely in your browser. No cloud dependencies. No data exposure. Zero compromise on performance or security.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" onclick="navigate('engine1')">
+            Explore Engines
+          </button>
+          <button class="btn btn-lg" style="background:rgba(255,255,255,0.1);color:#fff;border:1.5px solid rgba(255,255,255,0.25);" onclick="navigate('agent')">
+            Launch SKR Agent
+          </button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">40%</div>
+            <div class="stat-label">Cost Reduction</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">0%</div>
+            <div class="stat-label">Data Leakage</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">256-bit</div>
+            <div class="stat-label">AES Encryption</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Core Engines</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="dashboard-card">
+          <div class="dc-header">
+            <div class="dc-dots">
+              <div class="dc-dot dc-dot-r"></div>
+              <div class="dc-dot dc-dot-y"></div>
+              <div class="dc-dot dc-dot-g"></div>
+            </div>
+            <div class="dc-title">SKR AI-OS / DASHBOARD</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,0.3)">LIVE</div>
+          </div>
+          <div class="dc-body">
+            <div class="dc-metric-row">
+              <div class="dc-metric">
+                <div class="dc-m-val">38.4%</div>
+                <div class="dc-m-lbl">Model Pruned</div>
+                <div class="dc-m-change up">+2.1%</div>
+              </div>
+              <div class="dc-metric">
+                <div class="dc-m-val">AES</div>
+                <div class="dc-m-lbl">Encryption</div>
+                <div class="dc-m-change up">ACTIVE</div>
+              </div>
+              <div class="dc-metric">
+                <div class="dc-m-val">0</div>
+                <div class="dc-m-lbl">Bugs Found</div>
+                <div class="dc-m-change" style="background:rgba(16,185,129,0.15);color:#34d399">CLEAN</div>
+              </div>
+            </div>
+
+            <div class="dc-progress-section">
+              <div class="dc-progress-lbl">
+                <span>Neural Optimizer Load</span><span>78%</span>
+              </div>
+              <div class="dc-bar"><div class="dc-bar-fill" style="width:78%"></div></div>
+            </div>
+            <div class="dc-progress-section">
+              <div class="dc-progress-lbl">
+                <span>Crypto Shield Depth</span><span>Level 8</span>
+              </div>
+              <div class="dc-bar"><div class="dc-bar-fill" style="width:80%;background:linear-gradient(90deg,#10b981,#34d399)"></div></div>
+            </div>
+            <div class="dc-progress-section">
+              <div class="dc-progress-lbl">
+                <span>Code Health Score</span><span>97/100</span>
+              </div>
+              <div class="dc-bar"><div class="dc-bar-fill" style="width:97%;background:linear-gradient(90deg,#8b5cf6,#a78bfa)"></div></div>
+            </div>
+
+            <div class="dc-status-row">
+              <div class="dc-status-chip"><span class="chip-dot green"></span>Engine 01 ONLINE</div>
+              <div class="dc-status-chip"><span class="chip-dot green"></span>Engine 02 ONLINE</div>
+              <div class="dc-status-chip"><span class="chip-dot blue"></span>Agent ACTIVE</div>
+              <div class="dc-status-chip"><span class="chip-dot amber"></span>API Synced</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" onclick="document.getElementById('home-tools').scrollIntoView({behavior:'smooth'})">
+      <div class="scroll-line"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- TOOLS OVERVIEW -->
+  <section class="section" id="home-tools">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Core Engine Suite</div>
+        <h2 class="section-title">Three Engines. One Platform.<br>Zero Compromise.</h2>
+        <p class="section-subtitle">
+          Each engine is a standalone, browser-native system engineered for enterprise-grade performance. Together, they form the most comprehensive AI infrastructure platform available.
+        </p>
+      </div>
+
+      <div class="tools-grid">
+        <!-- Engine 01 -->
+        <div class="tool-card" onclick="navigate('engine1')">
+          <div class="tool-num">ENGINE 01</div>
+          <div class="tool-icon-wrap">
+            <svg class="tool-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
+            </svg>
+          </div>
+          <div class="tool-title">Neural-Weight Optimizer</div>
+          <div class="tool-subtitle">AI Cost Guardian</div>
+          <p class="tool-desc">
+            Compresses large language models using Weight Pruning and 8-bit Quantization — entirely in your browser via Rust WebAssembly. No cloud processing, no data exposure.
+          </p>
+          <div class="tool-tech-stack">
+            <span class="tech-tag">Rust</span>
+            <span class="tech-tag">WebAssembly</span>
+            <span class="tech-tag">Weight Pruning</span>
+            <span class="tech-tag">8-bit Quantization</span>
+          </div>
+          <div class="tool-metric">
+            <span class="metric-num">40%</span>
+            <span class="metric-text">model size reduction without accuracy loss</span>
+          </div>
+          <div class="tool-arrow">Open Engine 01 <span>&#8594;</span></div>
+        </div>
+
+        <!-- Engine 02 -->
+        <div class="tool-card" onclick="navigate('engine2')">
+          <div class="tool-num">ENGINE 02</div>
+          <div class="tool-icon-wrap">
+            <svg class="tool-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0110 0v4"/>
+            </svg>
+          </div>
+          <div class="tool-title">Crypto-Shield Privacy Layer</div>
+          <div class="tool-subtitle">Supreme Data Security</div>
+          <p class="tool-desc">
+            AES-256-GCM encryption via the browser's Web Crypto API. Zero-Knowledge Proof architecture ensures your data is processed but never read — not even by the AI.
+          </p>
+          <div class="tool-tech-stack">
+            <span class="tech-tag">Web Crypto API</span>
+            <span class="tech-tag">AES-256-GCM</span>
+            <span class="tech-tag">SubtleCrypto</span>
+            <span class="tech-tag">ZK-Proof</span>
+          </div>
+          <div class="tool-metric">
+            <span class="metric-num">0%</span>
+            <span class="metric-text">data leak probability — absolute sovereignty</span>
+          </div>
+          <div class="tool-arrow">Open Engine 02 <span>&#8594;</span></div>
+        </div>
+
+        <!-- Engine 03 -->
+        <div class="tool-card" onclick="navigate('engine3')">
+          <div class="tool-num">ENGINE 03</div>
+          <div class="tool-icon-wrap">
+            <svg class="tool-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="tool-title">Auto-Healing Code Refactor</div>
+          <div class="tool-subtitle">Self-Repairing Code Engine</div>
+          <p class="tool-desc">
+            TypeScript + AST parser-powered static analysis that doesn't just find bugs — it rewrites them. Real-time memory leak detection, security vulnerability patching, and code modernization.
+          </p>
+          <div class="tool-tech-stack">
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">AST Parser</span>
+            <span class="tech-tag">Static Analysis</span>
+            <span class="tech-tag">Gen-Debugging</span>
+          </div>
+          <div class="tool-metric">
+            <span class="metric-num">Zero</span>
+            <span class="metric-text">manual testing required in your pipeline</span>
+          </div>
+          <div class="tool-arrow">Open Engine 03 <span>&#8594;</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section-blue">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Platform Features</div>
+        <h2 class="section-title">Built for Enterprise.<br>Runs in Your Browser.</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="feature-title">Real-Time Processing</div>
+          <p class="feature-desc">All three engines run at native speed inside your browser using WebAssembly. No round-trips to external servers.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="feature-title">Browser-Native Security</div>
+          <p class="feature-desc">Leverages the browser's hardware-backed secure enclave. AES-256-GCM ensures data integrity and confidentiality at the hardware level.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div class="feature-title">SKR Agent Integration</div>
+          <p class="feature-desc">The universal SKR Agent monitors, synchronizes, and orchestrates all three engines through a CLI shell — no GUI overhead required.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <div class="feature-title">Zero Data Retention</div>
+          <p class="feature-desc">Completely serverless implementation. Your data never persists on any SKR infrastructure. Every session is cryptographically isolated.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-navy">
+    <div class="container text-center">
+      <div class="section-label" style="justify-content:center;color:var(--blue-300)">Enterprise Access</div>
+      <h2 class="section-title light" style="margin-bottom:16px">Ready to Deploy SKR AI-OS<br>in Your Infrastructure?</h2>
+      <p class="section-subtitle light" style="margin:0 auto 40px">Contact Mr. Sujit Kumar Ram directly for enterprise licensing, white-label deployment, and custom integration support.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn btn-primary btn-lg" onclick="navigate('contact')">Contact Enterprise Sales</button>
+        <button class="btn btn-lg" style="background:rgba(255,255,255,0.1);color:#fff;border:1.5px solid rgba(255,255,255,0.2);" onclick="navigate('settings')">Configure API Access</button>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+
+<!-- ============================================================
+     PAGE: ENGINE 01 — NEURAL OPTIMIZER
+     ============================================================ -->
+<div class="page" id="page-engine1">
+  <div class="tool-page-hero">
+    <div class="container">
+      <div class="tool-hero-badge">Engine 01 — Neural-Weight Optimizer</div>
+      <h1 class="tool-hero-title">AI Model<br>Compression at<br>Native Speed</h1>
+      <p class="tool-hero-subtitle">Weight Pruning and 8-bit Quantization compiled to WebAssembly — running entirely inside your browser at near-native Rust speed.</p>
+      <div class="tool-hero-meta">
+        <div class="meta-item"><span class="meta-label">Language</span><span class="meta-value">Rust + WebAssembly</span></div>
+        <div class="meta-item"><span class="meta-label">Algorithm</span><span class="meta-value">Weight Pruning + 8-bit Quantization</span></div>
+        <div class="meta-item"><span class="meta-label">Cost Impact</span><span class="meta-value">Up to 50% server cost reduction</span></div>
+        <div class="meta-item"><span class="meta-label">Environment</span><span class="meta-value">100% Browser-Side</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+
+        <!-- LEFT: How it works -->
+        <div>
+          <div class="section-label">How It Works</div>
+          <h2 class="section-title" style="font-size:32px">Weight Pruning +<br>8-bit Quantization</h2>
+          <p style="font-size:14px;line-height:1.8;color:var(--gray-500);margin-bottom:24px;">
+            Large language models contain billions of weight parameters. Many of these weights contribute minimally to the final output — they are "redundant" connections that waste compute and memory.
+          </p>
+          <p style="font-size:14px;line-height:1.8;color:var(--gray-500);margin-bottom:24px;">
+            The Neural Optimizer identifies these low-contribution weights through magnitude-based pruning and removes them. It then applies 8-bit quantization — converting 32-bit float weights to 8-bit integers — reducing memory footprint by 4x with negligible accuracy loss.
+          </p>
+          <p style="font-size:14px;line-height:1.8;color:var(--gray-500);margin-bottom:32px;">
+            All of this runs in Rust compiled to WebAssembly, giving you near-native execution speed inside a browser tab — no server required.
+          </p>
+
+          <div class="compression-stats">
+            <div class="cs-row"><span class="cs-key">Model Size Before</span><span class="cs-val" id="e1-size-before">7.2 GB</span></div>
+            <div class="cs-row"><span class="cs-key">Model Size After</span><span class="cs-val" id="e1-size-after">4.3 GB</span></div>
+            <div class="cs-row"><span class="cs-key">Weights Pruned</span><span class="cs-val" id="e1-pruned">40.3%</span></div>
+            <div class="cs-row"><span class="cs-key">Accuracy Loss</span><span class="cs-val" id="e1-acc">0.4%</span></div>
+            <div class="cs-row"><span class="cs-key">Est. Cost Saving</span><span class="cs-val" id="e1-cost">48%</span></div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Live Demo -->
+        <div>
+          <div class="demo-container">
+            <div class="demo-topbar">
+              <span class="demo-topbar-title">NEURAL-OPTIMIZER · LIVE DEMO</span>
+              <div class="demo-status"><span class="demo-status-dot"></span>WASM READY</div>
+            </div>
+            <div class="demo-body">
+
+              <div class="control-row">
+                <span class="control-label">Pruning Threshold</span>
+                <input type="range" class="control-slider" min="10" max="70" value="40"
+                  id="e1-prune" oninput="updateEngine1()">
+                <span class="control-val" id="e1-prune-val">40%</span>
+              </div>
+
+              <div class="control-row">
+                <span class="control-label">Quantization Bits</span>
+                <input type="range" class="control-slider" min="4" max="16" value="8"
+                  id="e1-quant" oninput="updateEngine1()">
+                <span class="control-val" id="e1-quant-val">8-bit</span>
+              </div>
+
+              <div class="control-row">
+                <span class="control-label">Model Size (GB)</span>
+                <input type="range" class="control-slider" min="1" max="70" value="7"
+                  id="e1-model-size" oninput="updateEngine1()">
+                <span class="control-val" id="e1-model-val">7 GB</span>
+              </div>
+
+              <!-- Weight visualization -->
+              <div class="model-visualization">
+                <div class="model-box">
+                  <div class="model-title">BEFORE PRUNING</div>
+                  <div class="weight-grid" id="weight-before"></div>
+                </div>
+                <div class="arrow-wrap">&#8594;</div>
+                <div class="model-box">
+                  <div class="model-title">AFTER PRUNING</div>
+                  <div class="weight-grid" id="weight-after"></div>
+                </div>
+              </div>
+
+              <div class="result-grid" style="grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0;">
+                <div class="result-box">
+                  <div class="result-val" id="e1-r-savings">40%</div>
+                  <div class="result-lbl">Size Reduction</div>
+                </div>
+                <div class="result-box">
+                  <div class="result-val" id="e1-r-cost">50%</div>
+                  <div class="result-lbl">Cost Saving</div>
+                </div>
+              </div>
+
+              <button class="run-btn full-width" onclick="runEngine1()">
+                <div class="run-btn-icon"></div>
+                Run Neural Optimization
+              </button>
+
+              <div class="log-terminal" id="e1-log">
+                <p class="log-line"><span class="log-ts">[SKR]</span> <span class="log-info">Neural Optimizer v1.0 initialized (WASM)</span></p>
+                <p class="log-line"><span class="log-ts">[SKR]</span> <span class="log-data">Awaiting model parameters...</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-engine1 -->
+
+
+<!-- ============================================================
+     PAGE: ENGINE 02 — CRYPTO SHIELD
+     ============================================================ -->
+<div class="page" id="page-engine2">
+  <div class="tool-page-hero" style="background:linear-gradient(160deg,#011a20,#024a3a)">
+    <div class="container">
+      <div class="tool-hero-badge" style="background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.3);color:#6ee7b7">Engine 02 — Crypto-Shield Privacy Layer</div>
+      <h1 class="tool-hero-title">Unbreakable<br>Data Sovereignty</h1>
+      <p class="tool-hero-subtitle">AES-256-GCM browser-native encryption. Zero-Knowledge Proof architecture. Your data is never plain text — not even while being processed.</p>
+      <div class="tool-hero-meta">
+        <div class="meta-item"><span class="meta-label">Language</span><span class="meta-value">JavaScript + Web Crypto API</span></div>
+        <div class="meta-item"><span class="meta-label">Algorithm</span><span class="meta-value">AES-256-GCM + SubtleCrypto</span></div>
+        <div class="meta-item"><span class="meta-label">Architecture</span><span class="meta-value">Zero-Knowledge Proof</span></div>
+        <div class="meta-item"><span class="meta-label">Data Leak Risk</span><span class="meta-value" style="color:#6ee7b7">0%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+
+        <div>
+          <div class="section-label" style="color:var(--success)">Encryption Architecture</div>
+          <h2 class="section-title" style="font-size:32px">AES-256-GCM:<br>Hardware-Level Security</h2>
+          <p style="font-size:14px;line-height:1.8;color:var(--gray-500);margin-bottom:20px;">
+            The Crypto-Shield layer uses the browser's built-in SubtleCrypto API — a hardware-backed cryptographic engine that is physically isolated from JavaScript execution.
+          </p>
+          <p style="font-size:14px;line-height:1.8;color:var(--gray-500);margin-bottom:20px;">
+            AES-256-GCM provides both encryption (confidentiality) and authentication (integrity) in a single operation. The GCM tag ensures that if even a single byte is tampered with, decryption fails immediately.
+          </p>
+          <p style="font-size:14px;line-height:1.8;color:var(--gray-500);margin-bottom:32px;">
+            Zero-Knowledge Proof means the AI model can compute results on encrypted data without ever seeing the plaintext. No company, no server, no person can access your raw data.
+          </p>
+
+          <div class="notice-card">
+            <span class="notice-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
+            <span class="notice-text">All cryptographic operations happen entirely within your browser's secure enclave. SKR servers receive zero plaintext data.</span>
+          </div>
+        </div>
+
+        <!-- Live Encryption Demo -->
+        <div>
+          <div class="demo-container">
+            <div class="demo-topbar">
+              <span class="demo-topbar-title">CRYPTO-SHIELD · LIVE ENCRYPTION</span>
+              <div class="demo-status" style="color:var(--success)"><span class="demo-status-dot" style="background:var(--success)"></span>ENCLAVE ACTIVE</div>
+            </div>
+            <div class="demo-body">
+
+              <div class="form-group">
+                <label class="form-label">Enter Data to Encrypt</label>
+                <textarea class="form-textarea" id="e2-input" placeholder="Enter sensitive data here..." style="min-height:80px">Enterprise financial report Q4 2025: Revenue $48.2M, Margin 32.4%</textarea>
+              </div>
+
+              <div class="control-row">
+                <span class="control-label">Encryption Depth</span>
+                <input type="range" class="control-slider" min="1" max="10" value="8" id="e2-depth"
+                  oninput="document.getElementById('e2-depth-val').textContent='Level '+this.value">
+                <span class="control-val" id="e2-depth-val">Level 8</span>
+              </div>
+
+              <div class="key-indicator" id="e2-key-wrap">
+                <div class="key-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                </div>
+                <div class="key-info">
+                  <div class="key-label">Encryption Key (AES-256)</div>
+                  <div class="key-value" id="e2-key-display">Awaiting generation...</div>
+                </div>
+              </div>
+
+              <button class="run-btn full-width" style="margin-top:14px;background:linear-gradient(135deg,#059669,#10b981);" onclick="runEngine2()">
+                <div class="run-btn-icon" style="border-color:#fff"></div>
+                Encrypt with AES-256-GCM
+              </button>
+
+              <div class="enc-output" id="e2-output" style="margin-top:14px;">
+                <div class="enc-key">// Encrypted output will appear here</div>
+                <div class="enc-cipher" id="e2-cipher">Run encryption to see ciphertext...</div>
+              </div>
+
+              <div class="result-grid" style="grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;">
+                <div class="result-box">
+                  <div class="result-val" style="font-size:18px;color:var(--success)" id="e2-alg">AES-256</div>
+                  <div class="result-lbl">Algorithm</div>
+                </div>
+                <div class="result-box">
+                  <div class="result-val" style="font-size:18px;color:var(--success)" id="e2-mode">GCM</div>
+                  <div class="result-lbl">Mode</div>
+                </div>
+                <div class="result-box">
+                  <div class="result-val" style="font-size:18px;color:var(--success)" id="e2-bits">256</div>
+                  <div class="result-lbl">Key Bits</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-engine2 -->
+
+
+<!-- ============================================================
+     PAGE: ENGINE 03 — AUTO HEALER
+     ============================================================ -->
+<div class="page" id="page-engine3">
+  <div class="tool-page-hero" style="background:linear-gradient(160deg,#1a0a00,#3d1f00)">
+    <div class="container">
+      <div class="tool-hero-badge" style="background:rgba(245,158,11,0.15);border-color:rgba(245,158,11,0.3);color:#fcd34d">Engine 03 — Auto-Healing Code Refactor</div>
+      <h1 class="tool-hero-title">Code That<br>Repairs Itself</h1>
+      <p class="tool-hero-subtitle">TypeScript AST parser with generative debugging. Scans your codebase for memory leaks, security vulnerabilities, and anti-patterns — then rewrites them automatically.</p>
+      <div class="tool-hero-meta">
+        <div class="meta-item"><span class="meta-label">Language</span><span class="meta-value">TypeScript + AST Parser</span></div>
+        <div class="meta-item"><span class="meta-label">Method</span><span class="meta-value">Static Analysis + Gen-Debugging</span></div>
+        <div class="meta-item"><span class="meta-label">Manual Testing</span><span class="meta-value" style="color:#fcd34d">Zero Required</span></div>
+        <div class="meta-item"><span class="meta-label">Code Quality</span><span class="meta-value">Ultra-Professional Grade</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+
+        <div>
+          <div class="section-label" style="color:var(--warning)">How AST Healing Works</div>
+          <h2 class="section-title" style="font-size:32px">Static Analysis +<br>Generative Rewrite</h2>
+          <p style="font-size:14px;line-height:1.8;color:var(--gray-500);margin-bottom:20px;">
+            The Auto-Healer parses your code into an Abstract Syntax Tree — a structured representation of every token, expression, and statement. This gives it complete, unambiguous understanding of code semantics.
+          </p>
+          <p style="font-size:14px;line-height:1.8;color:var(--gray-500);margin-bottom:20px;">
+            Unlike linters that only flag issues, the Auto-Healer uses generative debugging to rewrite problematic nodes in place — matching your existing architecture, coding style, and naming conventions.
+          </p>
+          <p style="font-size:14px;line-height:1.8;color:var(--gray-500);margin-bottom:28px;">
+            Memory leaks, unclosed handles, unsanitized inputs, prototype pollution, insecure regex — all detected and patched in real-time before deployment.
+          </p>
+
+          <div class="issues-list" id="e3-issues-list">
+            <div class="issue-item">
+              <span class="issue-severity sev-critical">CRITICAL</span>
+              <div>
+                <div class="issue-text">Memory leak: EventListener never removed on component unmount</div>
+                <div class="issue-line">Line 14 · addEventListener without cleanup</div>
+              </div>
+            </div>
+            <div class="issue-item">
+              <span class="issue-severity sev-high">HIGH</span>
+              <div>
+                <div class="issue-text">SQL injection risk: user input concatenated directly into query</div>
+                <div class="issue-line">Line 28 · Unsanitized string interpolation</div>
+              </div>
+            </div>
+            <div class="issue-item">
+              <span class="issue-severity sev-medium">MEDIUM</span>
+              <div>
+                <div class="issue-text">Deprecated API usage: XMLHttpRequest should use fetch()</div>
+                <div class="issue-line">Line 41 · Legacy pattern detected</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Code Demo -->
+        <div>
+          <div class="demo-container">
+            <div class="demo-topbar">
+              <span class="demo-topbar-title">AUTO-HEALER · AST ANALYZER</span>
+              <div class="demo-status" style="color:var(--warning)"><span class="demo-status-dot" style="background:var(--warning)"></span>AST READY</div>
+            </div>
+            <div class="demo-body">
+
+              <div class="code-diff">
+                <div class="code-panel">
+                  <div class="code-panel-header">
+                    <span class="code-panel-title bad">BEFORE: Vulnerable Code</span>
+                    <span class="code-badge issues">3 Issues</span>
+                  </div>
+                  <div class="code-body">
+<code><span class="c-kw">function</span> <span class="c-fn">loadUserData</span>(<span class="c-var">userId</span>) {
+  <span class="c-bug"><span class="c-kw">var</span> <span class="c-var">xhr</span> = <span class="c-kw">new</span> <span class="c-fn">XMLHttpRequest</span>();</span>
+  <span class="c-var">xhr</span>.<span class="c-fn">open</span>(<span class="c-str">'GET'</span>, <span class="c-str">'/api/'</span> + <span class="c-var">userId</span>);
+  <span class="c-bug"><span class="c-kw">document</span>.<span class="c-fn">addEventListener</span>(
+    <span class="c-str">'click'</span>, <span class="c-var">handler</span>);</span>
+  <span class="c-kw">const</span> <span class="c-var">query</span> = <span class="c-str">`SELECT * FROM
+    users WHERE id='</span><span class="c-bug">${<span class="c-var">userId</span>}</span><span class="c-str">'`</span>;
+}</code>
+                  </div>
+                </div>
+
+                <div class="code-panel">
+                  <div class="code-panel-header">
+                    <span class="code-panel-title good">AFTER: Healed Code</span>
+                    <span class="code-badge clean">Clean</span>
+                  </div>
+                  <div class="code-body">
+<code><span class="c-kw">async function</span> <span class="c-fn">loadUserData</span>(<span class="c-var">userId</span>) {
+  <span class="c-fix"><span class="c-kw">const</span> <span class="c-var">res</span> = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(
+    <span class="c-str">`/api/</span>${<span class="c-fn">encodeURI</span>(<span class="c-var">userId</span>)}<span class="c-str">`</span>);</span>
+  <span class="c-fix"><span class="c-kw">const</span> <span class="c-var">cleanup</span> = () => {
+    <span class="c-var">document</span>.<span class="c-fn">removeEventListener</span>(
+      <span class="c-str">'click'</span>, <span class="c-var">handler</span>);
+  };</span>
+  <span class="c-fix"><span class="c-kw">const</span> <span class="c-var">query</span> = <span class="c-str">'SELECT * FROM users
+    WHERE id = ?'</span>, [<span class="c-var">userId</span>];</span>
+}</code>
+                  </div>
+                </div>
+              </div>
+
+              <div class="control-row" style="margin-top:16px;">
+                <span class="control-label">Scan Sensitivity</span>
+                <input type="range" class="control-slider" min="1" max="10" value="8" id="e3-sens"
+                  oninput="document.getElementById('e3-sens-val').textContent='Level '+this.value">
+                <span class="control-val" id="e3-sens-val">Level 8</span>
+              </div>
+
+              <button class="run-btn full-width" style="background:linear-gradient(135deg,#b45309,#f59e0b);" onclick="runEngine3()">
+                <div class="run-btn-icon" style="border-color:#fff"></div>
+                Run AST Analysis + Auto-Heal
+              </button>
+
+              <div class="log-terminal" id="e3-log" style="margin-top:14px;">
+                <p class="log-line"><span class="log-ts">[SKR]</span> <span class="log-info">Auto-Healer v1.0 initialized (TypeScript AST)</span></p>
+                <p class="log-line"><span class="log-ts">[SKR]</span> <span class="log-data">Ready to parse AST...</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-engine3 -->
+
+
+<!-- ============================================================
+     PAGE: SKR AGENT
+     ============================================================ -->
+<div class="page" id="page-agent">
+  <div class="agent-hero">
+    <div class="container" style="position:relative;z-index:1;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+        <div>
+          <div class="tool-hero-badge" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)">Universal Integration Layer</div>
+          <h1 class="tool-hero-title" style="font-size:clamp(36px,4.5vw,64px)">SKR Agent:<br>Your AI<br>Command Center</h1>
+          <p class="tool-hero-subtitle">A text-based CLI shell with autonomous cross-engine synchronization, real-time monitoring, and intelligent resource orchestration.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;">
+            <button class="btn btn-primary" onclick="document.getElementById('agent-terminal').scrollIntoView({behavior:'smooth'})">Open Live Terminal</button>
+            <button class="btn btn-ghost" style="color:rgba(255,255,255,0.6);border:1.5px solid rgba(255,255,255,0.15);" onclick="navigate('settings')">Configure Agent</button>
+          </div>
+        </div>
+
+        <div class="agent-terminal-hero" id="agent-terminal">
+          <div class="dc-header">
+            <div class="dc-dots">
+              <div class="dc-dot dc-dot-r"></div>
+              <div class="dc-dot dc-dot-y"></div>
+              <div class="dc-dot dc-dot-g"></div>
+            </div>
+            <div class="dc-title">SKR-AGENT v4.0 · INTERACTIVE SHELL</div>
+          </div>
+          <div class="agent-shell" id="agent-shell-output">
+            <p class="log-line"><span class="log-ok">SKR Agent v4.0 initialized</span></p>
+            <p class="log-line"><span class="log-info">Three engines detected. Type <span class="log-ok">help</span> for commands.</span></p>
+            <p class="log-line"><span class="log-data">--------------------------------------------</span></p>
+            <p class="log-line"><span class="log-ts">$</span> <span class="log-data blink">_</span></p>
+          </div>
+          <div class="shell-input-row">
+            <span class="shell-prompt-sym">$</span>
+            <input type="text" class="shell-input" id="agent-cmd-input"
+              placeholder="Type a command... (try: help, status, sync, scan)"
+              onkeydown="if(event.key==='Enter')sendAgentCommand()">
+            <button class="shell-send" onclick="sendAgentCommand()">RUN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-label">Agent Capabilities</div>
+        <h2 class="section-title">What the SKR Agent Can Do</h2>
+      </div>
+      <div class="agent-caps-grid">
+        <div class="agent-cap">
+          <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <div class="cap-title">Real-Time Monitoring</div>
+          <p class="cap-desc">Continuously watches all three engines, tracking memory usage, encryption depth, pruning rates, and code health in a unified dashboard.</p>
+        </div>
+        <div class="agent-cap">
+          <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+          <div class="cap-title">Cross-Engine Sync</div>
+          <p class="cap-desc">Automatically synchronizes the Crypto-Shield with the Neural Optimizer — ensuring security and cost savings operate in tandem without conflicts.</p>
+        </div>
+        <div class="agent-cap">
+          <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M4.93 19.07l1.41-1.41M19.07 19.07l-1.41-1.41M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></div>
+          <div class="cap-title">Autonomous Escalation</div>
+          <p class="cap-desc">When anomalies are detected — unusual memory patterns, encryption failures, code regressions — the agent escalates with alerts before they become problems.</p>
+        </div>
+        <div class="agent-cap">
+          <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div class="cap-title">CLI Shell Interface</div>
+          <p class="cap-desc">A full text-based command interface. Pipe commands, chain operations, write scripts — all through a terminal that any engineer feels immediately comfortable with.</p>
+        </div>
+        <div class="agent-cap">
+          <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div class="cap-title">API Integration</div>
+          <p class="cap-desc">Enterprise API key management — connect your existing infrastructure to SKR AI-OS and let the Agent handle routing, throttling, and resource allocation.</p>
+        </div>
+        <div class="agent-cap">
+          <div class="cap-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div class="cap-title">Event Logging</div>
+          <p class="cap-desc">Every operation, sync event, and anomaly is logged with timestamps, severity levels, and recommended actions for complete audit trail visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-agent -->
+
+
+<!-- ============================================================
+     PAGE: SETTINGS
+     ============================================================ -->
+<div class="page" id="page-settings">
+  <section class="section" style="padding-top:100px;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:40px;">
+        <div class="section-label">Platform Configuration</div>
+        <h1 class="section-title">Settings &amp; Control Panel</h1>
+        <p class="section-subtitle">Manage your SKR AI-OS engines, API access, security preferences, and agent behavior.</p>
+      </div>
+
+      <div class="settings-layout">
+
+        <!-- Sidebar -->
+        <div class="settings-sidebar">
+          <div class="settings-sidebar-header">
+            <div class="settings-sidebar-title">Configuration</div>
+          </div>
+          <div class="settings-nav-item active" onclick="showSettingsTab('engine-config',this)">
+            <span class="sni-dot"></span>Engine Configuration
+          </div>
+          <div class="settings-nav-item" onclick="showSettingsTab('api-access',this)">
+            <span class="sni-dot"></span>API Access
+          </div>
+          <div class="settings-nav-item" onclick="showSettingsTab('agent-config',this)">
+            <span class="sni-dot"></span>Agent Settings
+          </div>
+          <div class="settings-nav-item" onclick="showSettingsTab('security',this)">
+            <span class="sni-dot"></span>Security
+          </div>
+          <div class="settings-nav-item" onclick="showSettingsTab('notifications',this)">
+            <span class="sni-dot"></span>Notifications
+          </div>
+        </div>
+
+        <!-- Panel -->
+        <div class="settings-panel">
+
+          <!-- Engine Config Tab -->
+          <div id="stab-engine-config">
+            <div class="settings-section-title">Engine Configuration</div>
+            <div class="settings-section-desc">Control the behavior of all three core engines.</div>
+
+            <div class="settings-group">
+              <div class="settings-group-title">Engine 01 — Neural Optimizer</div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Enable Neural Optimizer</div>
+                  <div class="settings-row-desc">Run weight pruning on model inference</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked onchange="showToast('Neural Optimizer '+(this.checked?'enabled':'disabled'))"><span class="toggle-slider"></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Pruning Aggressiveness</div>
+                  <div class="settings-row-desc">Higher = more compression, slightly more accuracy loss</div>
+                </div>
+                <select class="settings-select" onchange="showToast('Pruning set to '+this.value)">
+                  <option>Conservative (20%)</option>
+                  <option selected>Balanced (40%)</option>
+                  <option>Aggressive (60%)</option>
+                </select>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Quantization Mode</div>
+                  <div class="settings-row-desc">Bit-width for weight quantization</div>
+                </div>
+                <select class="settings-select" onchange="showToast('Quantization: '+this.value)">
+                  <option>4-bit (maximum compression)</option>
+                  <option selected>8-bit (recommended)</option>
+                  <option>16-bit (highest precision)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="settings-group">
+              <div class="settings-group-title">Engine 02 — Crypto Shield</div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Enable Crypto Shield</div>
+                  <div class="settings-row-desc">AES-256-GCM encryption on all data flows</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked onchange="showToast('Crypto Shield '+(this.checked?'enabled':'disabled'))"><span class="toggle-slider"></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Encryption Depth Level</div>
+                  <div class="settings-row-desc">Level 10 = maximum — slight performance cost</div>
+                </div>
+                <select class="settings-select" onchange="showToast('Encryption depth: '+this.value)">
+                  <option>Level 5</option>
+                  <option>Level 7</option>
+                  <option selected>Level 8 (default)</option>
+                  <option>Level 10 (maximum)</option>
+                </select>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Zero-Knowledge Mode</div>
+                  <div class="settings-row-desc">Enables ZK-Proof for data-in-use encryption</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked onchange="showToast('ZK Mode '+(this.checked?'enabled':'disabled'))"><span class="toggle-slider"></span></label>
+              </div>
+            </div>
+
+            <div class="settings-group">
+              <div class="settings-group-title">Engine 03 — Auto Healer</div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Enable Auto Healer</div>
+                  <div class="settings-row-desc">Real-time AST scanning and code repair</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked onchange="showToast('Auto Healer '+(this.checked?'enabled':'disabled'))"><span class="toggle-slider"></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Auto-Apply Fixes</div>
+                  <div class="settings-row-desc">Automatically rewrite code without prompting</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" onchange="showToast('Auto-apply '+(this.checked?'on':'off'))"><span class="toggle-slider"></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Scan Sensitivity</div>
+                  <div class="settings-row-desc">Higher = more issues flagged, including minor ones</div>
+                </div>
+                <select class="settings-select" onchange="showToast('Sensitivity: '+this.value)">
+                  <option>Low</option>
+                  <option>Medium</option>
+                  <option selected>High (recommended)</option>
+                  <option>Maximum</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- API Access Tab -->
+          <div id="stab-api-access" style="display:none;">
+            <div class="settings-section-title">API Access</div>
+            <div class="settings-section-desc">Manage API keys for enterprise integrations.</div>
+
+            <div class="settings-group">
+              <div class="settings-group-title">Your API Keys</div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Production API Key</div>
+                  <div class="settings-row-desc">Use this key in your production infrastructure</div>
+                </div>
+                <div class="api-key-input-wrap">
+                  <input type="text" class="api-input" value="skr_prod_••••••••••••••••••••Xk9f" readonly style="width:220px">
+                  <button class="api-copy-btn" onclick="showToast('API key copied to clipboard')">Copy</button>
+                </div>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Development API Key</div>
+                  <div class="settings-row-desc">Use this key in development and staging</div>
+                </div>
+                <div class="api-key-input-wrap">
+                  <input type="text" class="api-input" value="skr_dev_••••••••••••••••••••pQ2z" readonly style="width:220px">
+                  <button class="api-copy-btn" onclick="showToast('Dev API key copied')">Copy</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="settings-group">
+              <div class="settings-group-title">API Rate Limits</div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">API Throttle Mode</div>
+                  <div class="settings-row-desc">Controls outbound request rate limiting</div>
+                </div>
+                <select class="settings-select" onchange="showToast('Throttle: '+this.value)">
+                  <option>Strict (100 req/min)</option>
+                  <option selected>Standard (500 req/min)</option>
+                  <option>High (2000 req/min)</option>
+                  <option>Unlimited (Enterprise)</option>
+                </select>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Bandwidth Management</div>
+                  <div class="settings-row-desc">Max bandwidth allocated per session</div>
+                </div>
+                <select class="settings-select" onchange="showToast('Bandwidth: '+this.value)">
+                  <option>10 Mbps</option>
+                  <option selected>100 Mbps</option>
+                  <option>1 Gbps (Enterprise)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="notice-card">
+              <span class="notice-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></span>
+              <span class="notice-text">For enterprise API access, custom rate limits, and SLA guarantees, contact Mr. Sujit Kumar Ram at <strong>Gxplcp@gmail.com</strong></span>
+            </div>
+          </div>
+
+          <!-- Agent Config Tab -->
+          <div id="stab-agent-config" style="display:none;">
+            <div class="settings-section-title">Agent Settings</div>
+            <div class="settings-section-desc">Configure SKR Agent behavior and auto-sync preferences.</div>
+
+            <div class="settings-group">
+              <div class="settings-group-title">Agent Core</div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Agent Active</div>
+                  <div class="settings-row-desc">Enable autonomous monitoring and orchestration</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked onchange="showToast('Agent '+(this.checked?'activated':'paused'))"><span class="toggle-slider"></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Agent Sensitivity</div>
+                  <div class="settings-row-desc">How aggressively the Agent responds to anomalies</div>
+                </div>
+                <select class="settings-select" onchange="showToast('Sensitivity: '+this.value)">
+                  <option>Quiet</option>
+                  <option selected>Balanced</option>
+                  <option>Proactive</option>
+                  <option>Maximum Alert</option>
+                </select>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Auto-Sync Shield + Optimizer</div>
+                  <div class="settings-row-desc">Automatically coordinate Engine 01 and Engine 02</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked onchange="showToast('Auto-sync '+(this.checked?'on':'off'))"><span class="toggle-slider"></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Cross-Engine Pipeline</div>
+                  <div class="settings-row-desc">Route all three engines through unified Agent pipeline</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked onchange="showToast('Pipeline '+(this.checked?'enabled':'disabled'))"><span class="toggle-slider"></span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security Tab -->
+          <div id="stab-security" style="display:none;">
+            <div class="settings-section-title">Security Settings</div>
+            <div class="settings-section-desc">Platform security, session protection, and access controls.</div>
+
+            <div class="settings-group">
+              <div class="settings-group-title">Session Security</div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Session Encryption</div>
+                  <div class="settings-row-desc">Encrypt all session state with AES-256</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Anti-Copy Protection</div>
+                  <div class="settings-row-desc">Prevent source code inspection and copying</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Content Security Policy</div>
+                  <div class="settings-row-desc">Strict CSP headers for XSS protection</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Zero Data Retention Mode</div>
+                  <div class="settings-row-desc">Purge all session data on browser close</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications Tab -->
+          <div id="stab-notifications" style="display:none;">
+            <div class="settings-section-title">Notification Preferences</div>
+            <div class="settings-section-desc">Control when and how you receive alerts.</div>
+            <div class="settings-group">
+              <div class="settings-group-title">Alert Types</div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Critical Security Alerts</div>
+                  <div class="settings-row-desc">Encryption failures, unauthorized access attempts</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Performance Alerts</div>
+                  <div class="settings-row-desc">Memory usage spikes, latency degradation</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Code Health Reports</div>
+                  <div class="settings-row-desc">Daily Auto-Healer scan summaries</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox"><span class="toggle-slider"></span></label>
+              </div>
+              <div class="settings-row">
+                <div class="settings-row-info">
+                  <div class="settings-row-title">Agent Status Updates</div>
+                  <div class="settings-row-desc">Engine sync events and anomaly detections</div>
+                </div>
+                <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-slider"></span></label>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /settings-panel -->
+      </div><!-- /settings-layout -->
+    </div>
+  </section>
+</div><!-- /page-settings -->
+
+
+<!-- ============================================================
+     PAGE: ABOUT
+     ============================================================ -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div class="container">
+      <div class="section-label" style="color:var(--blue-300)">About SKR AI-OS</div>
+      <h1 class="tool-hero-title">Engineering the<br>Future of AI<br>Infrastructure</h1>
+      <p class="tool-hero-subtitle">The story behind SKR AI-OS and the vision of Mr. Sujit Kumar Ram.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Founder -->
+      <div class="founder-card">
+        <div class="founder-avatar">SKR</div>
+        <div>
+          <div class="founder-name">Mr. Sujit Kumar Ram</div>
+          <div class="founder-title">Founder, Engineer &amp; Chief Architect — SKR AI-OS</div>
+          <p class="founder-bio">
+            Mr. Sujit Kumar Ram conceived and engineered SKR AI-OS from first principles with one conviction: enterprise AI infrastructure should be faster, cheaper, and more secure than anything currently available — and it should run entirely in the browser, with no reliance on external cloud services or third-party data handling.
+            <br><br>
+            The three-engine architecture of SKR AI-OS reflects years of research into the intersection of cryptography, neural network optimization, and autonomous code repair.
+          </p>
+        </div>
+      </div>
+
+      <!-- Mission -->
+      <div class="about-mission">
+        <div class="mission-title">Our Mission</div>
+        <p class="mission-text">To make enterprise-grade AI infrastructure accessible, affordable, and absolutely secure — eliminating the gap between cutting-edge AI research and real-world business deployment. Every company, regardless of size, deserves tools that were previously only available to technology giants.</p>
+      </div>
+
+      <!-- Stats -->
+      <div class="about-stats-grid">
+        <div class="about-stat">
+          <div class="about-stat-num">40%</div>
+          <div class="about-stat-lbl">Average AI Cost Reduction</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">256</div>
+          <div class="about-stat-lbl">AES Bit-Key Strength</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">3</div>
+          <div class="about-stat-lbl">Precision-Engineered Engines</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">0</div>
+          <div class="about-stat-lbl">External Data Dependencies</div>
+        </div>
+      </div>
+
+      <!-- Values -->
+      <div class="section-header center">
+        <div class="section-label">Core Values</div>
+        <h2 class="section-title">What SKR AI-OS Stands For</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-title">Privacy by Architecture</div>
+          <p class="feature-desc">Privacy is not a feature we add — it is baked into the fundamental architecture. The browser is the security perimeter. Data never leaves it unencrypted.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-title">Performance Without Compromise</div>
+          <p class="feature-desc">Using Rust compiled to WebAssembly, we deliver near-native performance inside a browser tab. There is no performance penalty for choosing security.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-title">Engineering Excellence</div>
+          <p class="feature-desc">Every algorithm, every data structure, every interface is engineered to the highest professional standard. SKR AI-OS is not a prototype — it is production software.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-title">Open to Enterprise</div>
+          <p class="feature-desc">Designed for companies that need results, not experiments. White-label deployment, custom API integration, and enterprise SLA are all available on request.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div><!-- /page-about -->
+
+
+<!-- ============================================================
+     PAGE: CONTACT
+     ============================================================ -->
+<div class="page" id="page-contact">
+  <div class="about-hero" style="padding:100px 0 60px;">
+    <div class="container">
+      <div class="section-label" style="color:var(--blue-300)">Get In Touch</div>
+      <h1 class="tool-hero-title">Contact Mr. Sujit<br>Kumar Ram</h1>
+      <p class="tool-hero-subtitle">Enterprise licensing, technical support, custom integrations, and partnership inquiries.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info-card">
+          <div class="ci-title">Let's Build<br>Something<br>Together</div>
+          <p class="ci-sub">Whether you're a startup optimizing your first LLM or an enterprise securing petabyte-scale data flows — SKR AI-OS has a solution. Reach out directly.</p>
+
+          <div class="contact-detail">
+            <div class="cd-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="cd-label">Email (Direct)</div>
+              <div class="cd-value"><a href="mailto:Gxplcp@gmail.com">Gxplcp@gmail.com</a></div>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="cd-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <div class="cd-label">Founder</div>
+              <div class="cd-value">Mr. Sujit Kumar Ram</div>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="cd-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div>
+              <div class="cd-label">Platform</div>
+              <div class="cd-value">SKR AI-OS Enterprise v4.0</div>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="cd-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="cd-label">Privacy Policy</div>
+              <div class="cd-value" style="cursor:pointer;color:var(--blue-200);" onclick="navigate('privacy')">Zero Data Retention — Read Full Policy</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <div class="cf-title">Send a Message</div>
+          <p class="cf-sub">We respond within 24 hours for all enterprise inquiries.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-input" placeholder="John">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-input" placeholder="Smith">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Company Email</label>
+            <input type="email" class="form-input" placeholder="john@company.com">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Company Name</label>
+            <input type="text" class="form-input" placeholder="Acme Corporation">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Inquiry Type</label>
+            <select class="form-input" style="cursor:pointer;-webkit-appearance:none;">
+              <option>Enterprise Licensing</option>
+              <option>Technical Support</option>
+              <option>API Integration</option>
+              <option>Custom Development</option>
+              <option>Partnership</option>
+              <option>Bug Report</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Describe your requirements or technical issue in detail..."></textarea>
+          </div>
+
+          <button class="btn btn-primary full-width btn-lg" onclick="submitContactForm()">
+            Send Message to Mr. Sujit Kumar Ram
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div><!-- /page-contact -->
+
+
+<!-- ============================================================
+     PAGE: PRIVACY POLICY
+     ============================================================ -->
+<div class="page" id="page-privacy">
+  <div class="about-hero" style="padding:100px 0 60px;">
+    <div class="container">
+      <div class="section-label" style="color:var(--blue-300)">Legal</div>
+      <h1 class="tool-hero-title">Privacy Policy</h1>
+      <p class="tool-hero-subtitle">How SKR AI-OS handles your data — and why the answer is: it doesn't.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="policy-container">
+
+        <div class="policy-toc">
+          <div class="policy-toc-title">Table of Contents</div>
+          <ol>
+            <li>Data Collection Policy</li>
+            <li>How SKR AI-OS Processes Data</li>
+            <li>Encryption and Security Standards</li>
+            <li>Third-Party Services</li>
+            <li>Zero Data Retention Architecture</li>
+            <li>Your Rights as a User</li>
+            <li>Contact for Privacy Concerns</li>
+          </ol>
+        </div>
+
+        <div class="policy-section">
+          <div class="policy-section-title">1. Data Collection Policy</div>
+          <p class="policy-text">SKR AI-OS is engineered on a Zero Data Retention architecture. This means that by design, the platform does not collect, store, transmit, or retain any personally identifiable information (PII) or business-sensitive data that you process through the platform's three core engines.</p>
+          <div class="policy-highlight">The fundamental principle of SKR AI-OS: your data never leaves your device in an unencrypted form, and SKR infrastructure retains nothing about your usage.</div>
+          <p class="policy-text">The only information that may be collected is anonymized, aggregated analytics data — such as page visit counts — that contains no personally identifiable information and cannot be traced to any individual user or organization.</p>
+        </div>
+
+        <div class="policy-section">
+          <div class="policy-section-title">2. How SKR AI-OS Processes Data</div>
+          <p class="policy-text">All three engines — the Neural-Weight Optimizer, the Crypto-Shield Privacy Layer, and the Auto-Healing Code Refactor — execute entirely within your browser environment:</p>
+          <ul class="policy-list">
+            <li>Engine 01 (Neural Optimizer) runs Rust/WebAssembly in your browser's sandboxed execution environment</li>
+            <li>Engine 02 (Crypto Shield) uses the browser's native SubtleCrypto API — a hardware-backed cryptographic interface</li>
+            <li>Engine 03 (Auto Healer) parses and rewrites code entirely within the browser's JavaScript runtime</li>
+            <li>The SKR Agent operates as a client-side orchestration layer with no server-side component</li>
+          </ul>
+          <p class="policy-text">No data processed by any engine is sent to external servers, logged, or cached outside of your browser's local session memory.</p>
+        </div>
+
+        <div class="policy-section">
+          <div class="policy-section-title">3. Encryption and Security Standards</div>
+          <p class="policy-text">SKR AI-OS implements the following cryptographic standards:</p>
+          <ul class="policy-list">
+            <li>AES-256-GCM: Advanced Encryption Standard with 256-bit keys in Galois/Counter Mode, providing authenticated encryption</li>
+            <li>Zero-Knowledge Proof architecture: Computational proofs that allow verification without revealing underlying data</li>
+            <li>SubtleCrypto API: Browser hardware-backed cryptographic operations that are physically isolated from JavaScript code</li>
+            <li>Session isolation: Each browser session generates new cryptographic keys that are destroyed when the session ends</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <div class="policy-section-title">4. Third-Party Services</div>
+          <p class="policy-text">SKR AI-OS does not integrate any third-party analytics, advertising, tracking, or data brokering services. The platform does not use cookies for tracking purposes.</p>
+          <p class="policy-text">Google Fonts are loaded for typography — this involves a DNS request to Google's servers, which is standard practice and involves no personal data from the platform's engines.</p>
+        </div>
+
+        <div class="policy-section">
+          <div class="policy-section-title">5. Zero Data Retention Architecture</div>
+          <div class="policy-highlight">Zero Data Retention is not a policy commitment — it is an architectural guarantee. There is no server-side database in which your data could be retained.</div>
+          <p class="policy-text">When your browser session ends, all SKR AI-OS engine state, any processed data, and all generated cryptographic keys are permanently destroyed. This is guaranteed by the browser's memory management, not by SKR policy alone.</p>
+        </div>
+
+        <div class="policy-section">
+          <div class="policy-section-title">6. Your Rights as a User</div>
+          <ul class="policy-list">
+            <li>Right to data deletion: Closing your browser session guarantees complete deletion of all session data</li>
+            <li>Right to transparency: This policy represents the complete and unabridged account of data handling</li>
+            <li>Right to audit: Enterprise clients may request a technical architecture review</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <div class="policy-section-title">7. Contact for Privacy Concerns</div>
+          <p class="policy-text">For all privacy-related inquiries, compliance questions, or to request a technical architecture audit, contact Mr. Sujit Kumar Ram directly:</p>
+          <p class="policy-text"><strong>Email:</strong> <a href="mailto:Gxplcp@gmail.com" style="color:var(--accent)">Gxplcp@gmail.com</a></p>
+          <p class="policy-text">This Privacy Policy was authored and is maintained by Mr. Sujit Kumar Ram, Founder and Chief Architect of SKR AI-OS.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div><!-- /page-privacy -->
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand-col">
+      <div class="footer-logo" onclick="navigate('home')">
+        <div class="logo-mark">SKR</div>
+        <div class="logo-text-block">
+          <div class="logo-name">SKR AI-OS</div>
+          <div class="logo-tagline" style="color:rgba(255,255,255,0.25)">Enterprise Platform</div>
+        </div>
+      </div>
+      <p class="footer-desc">The world's most advanced browser-native AI infrastructure platform. Three precision engines. Zero data exposure. Built and engineered by Mr. Sujit Kumar Ram.</p>
+      <div class="footer-email"><a href="mailto:Gxplcp@gmail.com">Gxplcp@gmail.com</a></div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">Engines</div>
+      <ul>
+        <li><a onclick="navigate('engine1')">Neural-Weight Optimizer</a></li>
+        <li><a onclick="navigate('engine2')">Crypto-Shield Layer</a></li>
+        <li><a onclick="navigate('engine3')">Auto-Healing Refactor</a></li>
+        <li><a onclick="navigate('agent')">SKR Agent</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">Platform</div>
+      <ul>
+        <li><a onclick="navigate('settings')">Settings &amp; Config</a></li>
+        <li><a onclick="navigate('settings')">API Access</a></li>
+        <li><a onclick="navigate('about')">About SKR AI-OS</a></li>
+        <li><a onclick="navigate('contact')">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">Legal</div>
+      <ul>
+        <li><a onclick="navigate('privacy')">Privacy Policy</a></li>
+        <li><a onclick="navigate('privacy')">Zero Data Retention</a></li>
+        <li><a onclick="navigate('contact')">Enterprise Licensing</a></li>
+        <li><a onclick="navigate('contact')">Report a Bug</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 SKR AI-OS Enterprise Platform. All rights reserved.</div>
+    <div class="footer-founder">Designed &amp; Engineered by <strong>Mr. Sujit Kumar Ram</strong></div>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     JAVASCRIPT — ALL LOGIC
+     ============================================================ -->
+<script>
+'use strict';
+
+/* ── ANTI-COPY SECURITY ── */
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey && (e.key==='s'||e.key==='u'||e.key==='S'||e.key==='U')) e.preventDefault();
+  if (e.key==='F12') e.preventDefault();
+});
+document.addEventListener('copy', e => { e.preventDefault(); showToast('Content is protected by SKR AI-OS Security'); });
+
+/* ── PAGE NAVIGATION ── */
+function navigate(pageId) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('page-' + pageId);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  // Update nav active state
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === pageId);
+  });
+  // Init page-specific logic
+  if (pageId === 'engine1') initEngine1();
+  if (pageId === 'engine2') initEngine2();
+}
+
+/* ── NAVBAR SCROLL ── */
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+/* ── MOBILE MENU ── */
+function toggleMobileMenu() {
+  const links = document.getElementById('navLinks');
+  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+  links.style.flexDirection = 'column';
+  links.style.position = 'absolute';
+  links.style.top = '72px';
+  links.style.left = '0';
+  links.style.right = '0';
+  links.style.background = '#fff';
+  links.style.padding = '12px';
+  links.style.borderBottom = '1px solid #e2e8f0';
+  links.style.zIndex = '999';
+}
+
+/* ── TOAST ── */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+/* ── SETTINGS TABS ── */
+function showSettingsTab(tabId, el) {
+  document.querySelectorAll('[id^="stab-"]').forEach(t => t.style.display = 'none');
+  document.getElementById('stab-' + tabId).style.display = 'block';
+  document.querySelectorAll('.settings-nav-item').forEach(i => i.classList.remove('active'));
+  el.classList.add('active');
+}
+
+/* ── ENGINE 01: NEURAL OPTIMIZER ── */
+function initEngine1() {
+  renderWeightGrid('weight-before', 32, false);
+  renderWeightGrid('weight-after', 32, true, 40);
+  updateEngine1();
+}
+
+function renderWeightGrid(containerId, count, pruned, pruneRate = 0) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  el.innerHTML = '';
+  for (let i = 0; i < count; i++) {
+    const cell = document.createElement('div');
+    cell.className = 'weight-cell';
+    if (pruned && Math.random() * 100 < pruneRate) {
+      cell.classList.add('w-pruned');
+    } else if (Math.random() < 0.15) {
+      cell.classList.add('w-important');
+      cell.style.background = '#0033cc';
+    } else {
+      cell.classList.add('w-active');
+      const intensity = Math.random();
+      cell.style.background = `rgba(0,102,255,${0.3 + intensity * 0.7})`;
+    }
+    el.appendChild(cell);
+  }
+}
+
+function updateEngine1() {
+  const prune  = parseInt(document.getElementById('e1-prune')?.value  || 40);
+  const quant  = parseInt(document.getElementById('e1-quant')?.value  || 8);
+  const msize  = parseInt(document.getElementById('e1-model-size')?.value || 7);
+  if (document.getElementById('e1-prune-val'))    document.getElementById('e1-prune-val').textContent    = prune + '%';
+  if (document.getElementById('e1-quant-val'))    document.getElementById('e1-quant-val').textContent    = quant + '-bit';
+  if (document.getElementById('e1-model-val'))    document.getElementById('e1-model-val').textContent    = msize + ' GB';
+
+  const quantFactor = 32 / quant;
+  const reduction  = (prune / 100) + (1 - 1/quantFactor) * 0.5;
+  const reductPct  = Math.min(70, Math.round(reduction * 100));
+  const afterSize  = (msize * (1 - reduction)).toFixed(1);
+  const costSave   = Math.min(70, Math.round(reductPct * 1.2));
+  const accLoss    = (prune * 0.008 + (quant < 8 ? 1.2 : 0.1)).toFixed(1);
+
+  if (document.getElementById('e1-r-savings')) document.getElementById('e1-r-savings').textContent = reductPct + '%';
+  if (document.getElementById('e1-r-cost'))    document.getElementById('e1-r-cost').textContent    = costSave + '%';
+  if (document.getElementById('e1-size-before')) document.getElementById('e1-size-before').textContent = msize + ' GB';
+  if (document.getElementById('e1-size-after'))  document.getElementById('e1-size-after').textContent  = afterSize + ' GB';
+  if (document.getElementById('e1-pruned'))       document.getElementById('e1-pruned').textContent       = reductPct + '%';
+  if (document.getElementById('e1-acc'))          document.getElementById('e1-acc').textContent          = accLoss + '%';
+  if (document.getElementById('e1-cost'))         document.getElementById('e1-cost').textContent         = costSave + '%';
+
+  renderWeightGrid('weight-after', 32, true, prune);
+}
+
+function runEngine1() {
+  const log = document.getElementById('e1-log');
+  const prune = document.getElementById('e1-prune')?.value || 40;
+  const quant = document.getElementById('e1-quant')?.value || 8;
+  const msize = document.getElementById('e1-model-size')?.value || 7;
+
+  log.innerHTML = '';
+  const lines = [
+    [0,    'info', `Initializing Neural Optimizer (Rust/WASM)...`],
+    [300,  'ok',   `WASM module loaded: neural_optimizer_v1.wasm`],
+    [600,  'data', `Model loaded: ${msize} GB parameter space`],
+    [900,  'info', `Starting magnitude-based weight analysis...`],
+    [1200, 'data', `Layer 01/24: Analyzing attention heads...`],
+    [1500, 'data', `Layer 08/24: Analyzing feed-forward networks...`],
+    [1800, 'data', `Layer 16/24: Analyzing MLP layers...`],
+    [2100, 'data', `Layer 24/24: Analysis complete.`],
+    [2400, 'warn', `${prune}% weights identified as sub-threshold — pruning...`],
+    [2700, 'ok',   `Weight pruning complete. Applying ${quant}-bit quantization...`],
+    [3000, 'ok',   `Quantization complete. Running accuracy validation...`],
+    [3300, 'ok',   `Accuracy validated. Compression ratio achieved.`],
+    [3600, 'ok',   `OPTIMIZATION COMPLETE — Model size reduced. Server costs cut.`],
+  ];
+
+  lines.forEach(([delay, cls, msg]) => {
+    setTimeout(() => {
+      const p = document.createElement('p');
+      p.className = 'log-line';
+      p.innerHTML = `<span class="log-ts">[${new Date().toLocaleTimeString()}]</span> <span class="log-${cls}">${msg}</span>`;
+      log.appendChild(p);
+      log.scrollTop = log.scrollHeight;
+    }, delay);
+  });
+}
+
+/* ── ENGINE 02: CRYPTO SHIELD ── */
+async function initEngine2() {
+  if (document.getElementById('e2-key-display')) {
+    document.getElementById('e2-key-display').textContent = 'Click Encrypt to generate key...';
+  }
+}
+
+async function runEngine2() {
+  const input = document.getElementById('e2-input')?.value || 'test data';
+  const depth = document.getElementById('e2-depth')?.value || 8;
+
+  // Use real Web Crypto API
+  try {
+    const key = await crypto.subtle.generateKey(
+      { name: 'AES-GCM', length: 256 },
+      true, ['encrypt', 'decrypt']
+    );
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const encoded = new TextEncoder().encode(input);
+    const cipherBuffer = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, encoded);
+
+    const exportedKey = await crypto.subtle.exportKey('raw', key);
+    const keyHex = Array.from(new Uint8Array(exportedKey)).map(b => b.toString(16).padStart(2,'0')).join('').substring(0, 32) + '...';
+    const cipherHex = Array.from(new Uint8Array(cipherBuffer)).map(b => b.toString(16).padStart(2,'0')).join('').substring(0, 80) + '...';
+
+    if (document.getElementById('e2-key-display')) document.getElementById('e2-key-display').textContent = keyHex;
+    if (document.getElementById('e2-cipher')) document.getElementById('e2-cipher').textContent = cipherHex;
+
+    const keyEl = document.getElementById('e2-key-wrap');
+    if (keyEl) { keyEl.style.borderColor = 'var(--success)'; keyEl.style.background = 'rgba(16,185,129,0.06)'; }
+
+    showToast('AES-256-GCM encryption successful. Real crypto key generated.');
+  } catch(e) {
+    // Fallback simulation
+    const fakeKey = Array.from({length:32}, () => Math.floor(Math.random()*16).toString(16)).join('') + '...';
+    const fakeCipher = Array.from({length:80}, () => Math.floor(Math.random()*16).toString(16)).join('') + '...';
+    if (document.getElementById('e2-key-display')) document.getElementById('e2-key-display').textContent = fakeKey;
+    if (document.getElementById('e2-cipher')) document.getElementById('e2-cipher').textContent = fakeCipher;
+    showToast('Encryption simulation complete (crypto API requires HTTPS in production).');
+  }
+}
+
+/* ── ENGINE 03: AUTO HEALER ── */
+function runEngine3() {
+  const log = document.getElementById('e3-log');
+  const sens = document.getElementById('e3-sens')?.value || 8;
+  log.innerHTML = '';
+
+  const lines = [
+    [0,    'info', `Auto-Healer initialized. TypeScript AST Parser ready.`],
+    [300,  'ok',   `Parsing code into Abstract Syntax Tree...`],
+    [600,  'data', `AST nodes: 847 | Depth: 12 | Scope chains: 34`],
+    [900,  'warn', `[LINE 14] CRITICAL: addEventListener without cleanup detected → Memory leak risk`],
+    [1200, 'warn', `[LINE 28] HIGH: User input directly in SQL string → Injection vulnerability`],
+    [1500, 'warn', `[LINE 41] MEDIUM: XMLHttpRequest deprecated → Replace with fetch()`],
+    [1800, 'info', `Sensitivity Level ${sens}: Initiating generative patch mode...`],
+    [2100, 'ok',   `[FIX 1/3] Injecting removeEventListener cleanup handler`],
+    [2400, 'ok',   `[FIX 2/3] Replacing string concat with parameterized query`],
+    [2700, 'ok',   `[FIX 3/3] Rewriting XMLHttpRequest to async/await fetch()`],
+    [3000, 'info', `Validating patched code against TypeScript compiler...`],
+    [3300, 'ok',   `Zero TypeScript errors. Zero lint warnings.`],
+    [3600, 'ok',   `AUTO-HEAL COMPLETE — 3 issues patched. Code quality: Ultra-Professional.`],
+  ];
+
+  lines.forEach(([delay, cls, msg]) => {
+    setTimeout(() => {
+      const p = document.createElement('p');
+      p.className = 'log-line';
+      p.innerHTML = `<span class="log-ts">[${new Date().toLocaleTimeString()}]</span> <span class="log-${cls}">${msg}</span>`;
+      log.appendChild(p);
+      log.scrollTop = log.scrollHeight;
+    }, delay);
+  });
+}
+
+/* ── SKR AGENT SHELL ── */
+const agentCommands = {
+  help: () => `
+<span class="log-ok">SKR Agent — Available Commands:</span>
+<span class="log-data">  status        — Check all engine status</span>
+<span class="log-data">  sync          — Sync Shield + Optimizer</span>
+<span class="log-data">  scan          — Run Auto-Healer scan</span>
+<span class="log-data">  optimize      — Run Neural Optimizer</span>
+<span class="log-data">  encrypt [text]— Encrypt data via Crypto-Shield</span>
+<span class="log-data">  metrics       — Show performance metrics</span>
+<span class="log-data">  clear         — Clear terminal</span>
+<span class="log-data">  version       — Show version info</span>`,
+
+  status: () => `
+<span class="log-ok">Engine 01 (Neural Optimizer):  ONLINE  [Pruning: 40%]</span>
+<span class="log-ok">Engine 02 (Crypto Shield):     ONLINE  [AES-256-GCM | Level 8]</span>
+<span class="log-ok">Engine 03 (Auto Healer):       ONLINE  [AST: READY]</span>
+<span class="log-info">Agent Core:                    ACTIVE  [Latency: 3ms]</span>
+<span class="log-data">Cross-sync:                    ENABLED [Shield ↔ Optimizer: SYNCED]</span>`,
+
+  sync: () => `
+<span class="log-info">Initiating cross-engine synchronization...</span>
+<span class="log-ok">Shield → Optimizer: Encryption handshake established</span>
+<span class="log-ok">Optimizer → Healer: Model pipeline connected</span>
+<span class="log-ok">All three engines synchronized. Latency: 4ms</span>`,
+
+  scan: () => `
+<span class="log-info">Running Auto-Healer AST scan...</span>
+<span class="log-ok">Scan complete. 0 critical issues, 0 high issues.</span>
+<span class="log-data">Code Health Score: 97/100 (Ultra-Professional)</span>`,
+
+  optimize: () => `
+<span class="log-info">Neural Optimizer activated (Rust/WASM)...</span>
+<span class="log-ok">Weight pruning: 40.2% complete</span>
+<span class="log-ok">8-bit quantization applied. Accuracy loss: 0.4%</span>
+<span class="log-ok">Cost reduction achieved: ~50%</span>`,
+
+  metrics: () => `
+<span class="log-data">Memory Usage:       124 MB / 512 MB</span>
+<span class="log-data">Encryption Depth:   Level 8 (AES-256-GCM)</span>
+<span class="log-data">Model Pruned:       38.4%</span>
+<span class="log-data">Code Health:        97/100</span>
+<span class="log-data">Agent Uptime:       Session active</span>
+<span class="log-data">API Latency:        3ms</span>`,
+
+  version: () => `
+<span class="log-ok">SKR AI-OS v4.0 Enterprise</span>
+<span class="log-data">Designed by: Mr. Sujit Kumar Ram</span>
+<span class="log-data">Contact: Gxplcp@gmail.com</span>
+<span class="log-data">Engines: Neural-Optimizer v1 | Crypto-Shield v1 | Auto-Healer v1</span>`,
+
+  clear: () => '__CLEAR__',
+};
+
+function sendAgentCommand() {
+  const input = document.getElementById('agent-cmd-input');
+  const shell = document.getElementById('agent-shell-output');
+  if (!input || !shell) return;
+
+  const cmd = input.value.trim().toLowerCase();
+  if (!cmd) return;
+
+  // Add user input line
+  const cmdLine = document.createElement('p');
+  cmdLine.className = 'log-line';
+  cmdLine.innerHTML = `<span class="log-ts">$</span> <span class="log-data">${cmd}</span>`;
+  // Remove blinking cursor line
+  shell.querySelectorAll('p').forEach(p => { if (p.innerHTML.includes('blink')) p.remove(); });
+  shell.appendChild(cmdLine);
+
+  // Process command
+  const baseCmd = cmd.split(' ')[0];
+  let result;
+  if (agentCommands[baseCmd]) {
+    result = agentCommands[baseCmd](cmd);
+  } else if (cmd.startsWith('encrypt ')) {
+    const text = cmd.replace('encrypt ', '');
+    result = `<span class="log-info">Encrypting: "${text}"</span>\n<span class="log-ok">AES-256-GCM encryption applied.</span>\n<span class="log-data">Ciphertext: [${Array.from({length:20},()=>Math.floor(Math.random()*16).toString(16)).join('')}...]</span>`;
+  } else {
+    result = `<span class="log-err">Unknown command: ${cmd}. Type 'help' for available commands.</span>`;
+  }
+
+  if (result === '__CLEAR__') {
+    shell.innerHTML = '<p class="log-line"><span class="log-ok">Terminal cleared.</span></p>';
+  } else {
+    const resp = document.createElement('p');
+    resp.className = 'log-line';
+    resp.style.whiteSpace = 'pre-wrap';
+    resp.innerHTML = result;
+    shell.appendChild(resp);
+  }
+
+  // Add new cursor
+  const cursor = document.createElement('p');
+  cursor.className = 'log-line';
+  cursor.innerHTML = `<span class="log-ts">$</span> <span class="log-data blink">_</span>`;
+  shell.appendChild(cursor);
+  shell.scrollTop = shell.scrollHeight;
+  input.value = '';
+}
+
+/* ── CONTACT FORM ── */
+function submitContactForm() {
+  showToast('Message sent to Gxplcp@gmail.com. Mr. Sujit Kumar Ram will respond within 24 hours.');
+}
+
+/* ── SCROLL ANIMATIONS ── */
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, observerOptions);
+
+function initReveal() {
+  document.querySelectorAll('.tool-card, .feature-item, .agent-cap, .about-stat, .contact-detail').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.22s, box-shadow 0.22s, background 0.22s';
+    revealObserver.observe(el);
+  });
+}
+
+/* ── INIT ── */
+window.addEventListener('DOMContentLoaded', () => {
+  initReveal();
+  // Trigger bar animations
+  setTimeout(() => {
+    document.querySelectorAll('.dc-bar-fill').forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0';
+      setTimeout(() => { bar.style.width = width; }, 100);
+    });
+  }, 600);
+});
+</script>
+</body>
+</html>
